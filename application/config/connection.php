@@ -3,9 +3,9 @@
 abstract class Connection {
 
     private const DB_HOST = 'localhost';
-    private const DB_USER = 'root'; // bbbme11_ccima
-    private const DB_PASS = ''; //Ccdbrt-10.02
-	private const DB_NAME = 'ccima';
+    private const DB_USER = 'aliadoherpa_juan'; // bbbme11_ccima
+    private const DB_PASS = 'JH990907.'; //Ccdbrt-10.02
+	private const DB_NAME = 'aliadosherpa_ccima';
 	private const COLLATION = '"utf8"';
 	
 	private $conn;
