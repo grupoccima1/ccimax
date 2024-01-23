@@ -94,9 +94,16 @@ app.config(function($routeProvider) {
 	/********** Home **********/
 
 	.when('/', {
-		templateUrl: 'application/views/home/home_view.php'
+		templateUrl: 'application/views/home/home_view.php',
+	})
+	.when('/terminos_condiciones', {
+		templateUrl: 'application/views/home/terminos_view.php',
 	})
 
+	.when('/politicas_de_privacidad', {
+		templateUrl: 'application/views/home/politicas_privacidad.php',
+	})
+	
 	/********** Application **********/
 
 	.when('/login', {
@@ -163,8 +170,6 @@ app.config(function($routeProvider) {
 		controllerAs: 'dashboard'
 	})
 	
-
-
 	/***** Users *****/
 
 	.when('/users', {
@@ -183,7 +188,6 @@ app.config(function($routeProvider) {
 		controllerAs: 'dashboard'
 	})
 
-    
 	
 	/***** Developments *****/
 
@@ -421,6 +425,7 @@ app.config(function($routeProvider) {
 		controller: 'PBParamoCtrl',
 		controllerAs: 'paramo'
 	})
+	
 	.when('/Portto_Blanco-Paramo_3-Inventario', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/paramo/condos/paramo_3_inventary.php',
 		controller: 'PBParamoCtrl',
@@ -560,6 +565,19 @@ app.config(function($routeProvider) {
 		controllerAs: 'arrecife'
 	})
 
+	
+	/*****Tundra*****/
+	.when('/Portto_Blanco-Tundra', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/tundra/tundra_quote.php',
+		controller: 'PBTundraQuoteCtrl',
+		controllerAs: 'tundra'
+	})
+	.when('/Portto_Blanco-Tundra_1', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/tundra/condos/tundra_1_quote.php',
+		controller: 'PBTundraQuoteCtrl',
+		controllerAs: 'tundra'
+	})
+
 
 
     /***** LOMAS*****/
@@ -690,7 +708,27 @@ app.config(function($routeProvider) {
 		controller: 'PBBMalaquitaQuoteCtrl',
 		controllerAs: 'malaquita'
 	})
-
+/***** Opalo *****/
+	.when('/Portto_Blanco-Bernal/Opalo', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/opalo_quote.php',
+		controller: 'PBBOpaloQuoteCtrl',
+		controllerAs: 'opalo'
+	})
+	.when('/Portto_Blanco-Bernal/Opalo_1', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_1_quote.php',
+		controller: 'PBBOpaloQuoteCtrl',
+		controllerAs: 'opalo'
+	})
+	.when('/Portto_Blanco-Bernal/Opalo_2', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_2_quote.php',
+		controller: 'PBBOpaloQuoteCtrl',
+		controllerAs: 'opalo'
+	})
+	.when('/Portto_Blanco-Bernal/Opalo_3', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_3_quote.php',
+		controller: 'PBBOpaloQuoteCtrl',
+		controllerAs: 'opalo'
+	})
 
 	/********** Veredas de Lira **********/
 	
@@ -1038,8 +1076,11 @@ app.config(function($routeProvider) {
 		controller: 'NvtSurNuevoQuoteCtrl',
 		controllerAs: 'nvtSurNuevo'
 	})
-
-
+	.when('/Navetec-Sur_57_E2_Business_Park', {
+		templateUrl: 'application/views/navetec/quote/sur_57_ii_quote_view.php',
+		controller: 'NvtSurNuevoQuoteCtrl',
+		controllerAs: 'nvtSurNuevo'
+	})
 
 	/***** Conekta *****/
 
@@ -12212,6 +12253,117 @@ app.controller('PBArrecifeQuoteCtrl', function($scope, Inmovables, Moment) {
 
 });
 
+
+//Lanzamiento de Tundra 24 Octubre 2023
+app.controller('PBTundraQuoteCtrl', function($scope, Inmovables, Moment) {
+	
+	let tundra = this;
+
+	tundra.month = Moment.month();
+	tundra.nextMonth = Moment.nextMonth();
+	tundra.year = Moment.year();
+	
+	let inmovablesData = [];
+	tundra.inmovablesClassList = [];
+	tundra.propertyData = [];
+
+	tundra.dialogDisplay = 'hide';
+
+	let discountPlan1 = .20;
+	let discountPlan2 = .15;
+	let discountPlan3 = .25;
+
+	tundra.showPropertyData = function(idCondominium, number) {
+
+		angular.forEach(inmovablesData.inmovables, function(row, key) {
+
+			if (row.number == number && row.idCondominium == idCondominium) {
+
+				for (let indexCondos = 0; indexCondos < inmovablesData.condos.length; indexCondos++) {
+
+					if (inmovablesData.inmovables[key].idCondominium == inmovablesData.condos[indexCondos].idCondominium) {
+
+						tundra.propertyData.condominium = inmovablesData.condos[indexCondos].condominium;
+	
+						break;
+	
+					}
+	
+				}
+
+				if (row.property_class == 1) {
+					tundra.propertyData.propertyClass = 'Nave industrial';
+					tundra.costToBlock = '$30,000 MXN';
+				} else if (row.property_class == 2) {
+					tundra.propertyData.propertyClass = 'Lote industrial';
+					tundra.costToBlock = '$10,000 MXN';
+				} else {
+					tundra.propertyData.propertyClass = 'Lote habitacional';
+					tundra.costToBlock = '$10,000 MXN';
+				}
+				
+				for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+
+					if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+
+						tundra.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+						tundra.propertyData.cost_m2 = inmovablesData.propertyTypes[indexType].cost_m2;
+	
+						break;
+	
+					}
+	
+				}
+
+				if (inmovablesData.inmovables[key].cost_m2_increase != null) {
+					tundra.propertyData.cost_m2 += tundra.propertyData.cost_m2 * inmovablesData.inmovables[key].cost_m2_increase.value;
+				}
+
+				tundra.propertyData.number = row.number;
+				tundra.propertyData.area = row.area;
+				let total = tundra.propertyData.cost_m2 * tundra.propertyData.area;
+				tundra.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				
+				let totalDiscountPlan1 = total - (total * discountPlan1);
+				tundra.propertyData.discountPlan1 = discountPlan1 * 100;
+				tundra.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				
+				let totalDiscountPlan2 = total - (total * discountPlan2);
+				tundra.propertyData.discountPlan2 = discountPlan2 * 100;
+				tundra.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				
+				
+				let totalDiscountPlan3 = total - (total * discountPlan3);
+				tundra.propertyData.discountPlan3 = discountPlan3 * 100;
+				tundra.propertyData.totalPlan3 = totalDiscountPlan3.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				
+				tundra.openDialog();
+
+			}
+
+		});
+
+	}
+
+	tundra.openDialog = function() {
+		tundra.dialogDisplay = '';
+	}
+
+	tundra.closeDialog = function() {
+		tundra.dialogDisplay = 'hide';
+	}
+
+	let init = function() {
+		Inmovables.getInmovablesData(4, 30).then(function(response) {
+			inmovablesData = response;
+			tundra.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+		});
+	}
+
+	init();
+
+});
+
 // LANZAMIENTO DE LOMAS DIEGO 26-01-2022
 
 app.controller('PBLomasQuoteCtrl', function($scope, Inmovables, Moment) {
@@ -12722,7 +12874,7 @@ app.controller('PBBMalaquitaQuoteCtrl', function($scope, Inmovables, Moment) {
 	}
 
 	let init = function() {
-		Inmovables.getInmovablesData(12, 24).then(function(response) {
+		Inmovables.getInmovablesData(12, 29).then(function(response) {
 			inmovablesData = response;
 			malaquita.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
 		});
@@ -12731,8 +12883,114 @@ app.controller('PBBMalaquitaQuoteCtrl', function($scope, Inmovables, Moment) {
 	init();
 
 });
+/********** lanzamiento OPALO 16 septiembre 2023 **********/
+app.controller('PBBOpaloQuoteCtrl', function($scope, Inmovables, Moment) {
+	
+	let opalo = this;
 
+	opalo.month = Moment.month();
+	opalo.nextMonth = Moment.nextMonth();
+	opalo.year = Moment.year();
+	
+	let inmovablesData = [];
+	opalo.inmovablesClassList = [];
+	opalo.propertyData = [];
 
+	opalo.dialogDisplay = 'hide';
+
+	let discountPlan1 = .25;
+	let discountPlan2 = .20;
+
+	opalo.showPropertyData = function(idCondominium, number) {
+
+		angular.forEach(inmovablesData.inmovables, function(row, key) {
+
+			if (row.number == number && row.idCondominium == idCondominium) {
+
+				for (let indexCondos = 0; indexCondos < inmovablesData.condos.length; indexCondos++) {
+
+					if (inmovablesData.inmovables[key].idCondominium == inmovablesData.condos[indexCondos].idCondominium) {
+
+						opalo.propertyData.condominium = inmovablesData.condos[indexCondos].condominium;
+	
+						break;
+	
+					}
+	
+				}
+
+				if (row.property_class == 1) {
+					opalo.propertyData.propertyClass = 'Nave industrial';
+					opalo.costToBlock = '$30,000 MXN';
+				} else if (row.property_class == 2) {
+					opalo.propertyData.propertyClass = 'Lote industrial';
+					opalo.costToBlock = '$10,000 MXN';
+				} else {
+					opalo.propertyData.propertyClass = 'Lote habitacional';
+					opalo.costToBlock = '$10,000 MXN';
+				}
+				
+				for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+
+					if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+
+						opalo.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+						opalo.propertyData.cost_m2 = inmovablesData.propertyTypes[indexType].cost_m2;
+						break;
+	
+					}
+	
+				}
+
+				if (inmovablesData.inmovables[key].cost_m2_increase != null) {
+					opalo.propertyData.cost_m2 += opalo.propertyData.cost_m2 * inmovablesData.inmovables[key].cost_m2_increase.value;
+				}
+
+				opalo.propertyData.number = row.number;
+				opalo.propertyData.area = row.area;
+				let total = opalo.propertyData.cost_m2 * opalo.propertyData.area;
+				opalo.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+
+				let totalDiscountPlan1 = total - (total * discountPlan1);
+				if (key == 27) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+				if (key == 150) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+
+				opalo.propertyData.discountPlan1 = discountPlan1 * 100;
+				opalo.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				let totalDiscountPlan2 = total - (total * discountPlan2);
+				opalo.propertyData.discountPlan2 = discountPlan2 * 100;
+				opalo.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+			
+				opalo.openDialog();
+
+			}
+
+		});
+
+	}
+
+	opalo.openDialog = function() {
+		opalo.dialogDisplay = '';
+	}
+
+	opalo.closeDialog = function() {
+		opalo.dialogDisplay = 'hide';
+	}
+
+	let init = function() {
+		Inmovables.getInmovablesData(12, 29).then(function(response) {
+			inmovablesData = response;
+			opalo.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+		});
+	}
+
+	init();
+
+});
 /********** Menu **********/
 
 app.controller('ContactMenuCtrl', function DemoCtrl($mdDialog, $window, $location) {

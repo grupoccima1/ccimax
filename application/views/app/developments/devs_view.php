@@ -225,10 +225,16 @@
 												</md-button>
 											</md-menu-item>
 											<md-menu-item>
-												<md-button href="#!/inventary/layouts/sur">
-													Sur 57
+												<md-button href="#!/inventary/layouts/Sur%20Etapa%201">
+													Sur 57 etapa 1
 												</md-button>
 											</md-menu-item>
+											<md-menu-item>
+												<md-button href="#!/inventary/layouts/Sur%20Etapa%202">
+													Sur 57 etapa 2
+												</md-button>
+											</md-menu-item>
+											
 
 											<md-menu-divider></md-menu-divider>
 	
@@ -297,9 +303,24 @@
 													Manglar
 												</md-button>
 											</md-menu-item>
+											<md-menu-item>
+												<md-button href="#!/inventary/layouts/arrecife%201">
+													Arrecife 1
+												</md-button>
+											</md-menu-item>
+											<md-menu-item>
+												<md-button href="#!/inventary/layouts/arrecife%203">
+													Arrecife 3
+												</md-button>
+											</md-menu-item>
 											
 											<md-menu-divider></md-menu-divider>
-											
+											<md-menu-item>
+												<md-button href="#!/inventary/layouts/tundra%201">
+													Tundra 1
+												</md-button>
+											</md-menu-item>
+											<md-menu-divider></md-menu-divider>
 											<md-menu-item>
 												<span class="gray-txt">
 													PB Bernal
@@ -321,6 +342,17 @@
 											<md-menu-item>
 												<md-button href="#!/inventary/layouts/malaquita">
 													Malaquita
+												</md-button>
+											</md-menu-item>
+												<md-menu-item>
+												<md-button href="#!/inventary/layouts/opalo%201">
+													Opalo 1 
+												</md-button>
+											</md-menu-item>
+											</md-menu-item>
+												<md-menu-item>
+												<md-button href="#!/inventary/layouts/opalo%202">
+													Opalo 2 
 												</md-button>
 											</md-menu-item>
 
