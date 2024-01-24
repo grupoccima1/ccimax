@@ -94,14 +94,14 @@ app.config(function($routeProvider) {
 	/********** Home **********/
 
 	.when('/', {
-		templateUrl: 'application/views/home/home_view.php',
+		templateUrl: 'application/views/home/home_view.php'
 	})
 	.when('/terminos_condiciones', {
-		templateUrl: 'application/views/home/terminos_view.php',
+		templateUrl: 'application/views/home/terminos_view.php'
 	})
 
 	.when('/politicas_de_privacidad', {
-		templateUrl: 'application/views/home/politicas_privacidad.php',
+		templateUrl: 'application/views/home/politicas_privacidad.php'
 	})
 	
 	/********** Application **********/
@@ -559,6 +559,11 @@ app.config(function($routeProvider) {
 
 
 	/*****Arrecife*****/
+	.when('/Portto_Blanco-Arrecife_1', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_1_quote.php',
+		controller: 'PBArrecifeQuoteCtrl',
+		controllerAs: 'arrecife'
+	})
 	.when('/Portto_Blanco-Arrecife_3', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_3_quote.php',
 		controller: 'PBArrecifeQuoteCtrl',
@@ -724,8 +729,8 @@ app.config(function($routeProvider) {
 		controller: 'PBBOpaloQuoteCtrl',
 		controllerAs: 'opalo'
 	})
-	.when('/Portto_Blanco-Bernal/Opalo_3', {
-		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_3_quote.php',
+    .when('/Portto_Blanco-Bernal/Opalo_3', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_Falso_quote.php',
 		controller: 'PBBOpaloQuoteCtrl',
 		controllerAs: 'opalo'
 	})
@@ -747,45 +752,14 @@ app.config(function($routeProvider) {
 
 	/***** Application *****/
 
-	.when('/veredas_lira-master_plan', {
-		templateUrl: 'application/views/app/quote/habitta/veredas_lira/veredas_lira_view.php'
-	})
-
 	/*** Cedro ***/
 
 	/* Quote */
 
-	.when('/veredas_lira-cedro', {
-		templateUrl: 'application/views/app/quote/habitta/veredas_lira/etapa_1/cedro_view.php',
-		controller: 'VLCedroQuoteCtrl',
-		controllerAs: 'vlCedro'
-	})
+
 
 	/* Inventary */
 
-	.when('/Veredas_Lira-Cedro-Inventario', {
-		templateUrl: 'application/views/app/dashboard/habitta/veredas_lira/cedro_inventary_view.php',
-		controller: 'VLCedroCtrl',
-		controllerAs: 'cedro'
-	})
-
-	/*** Sabino ***/
-
-	/* Quote */
-
-	.when('/veredas_lira-sabino', {
-		templateUrl: 'application/views/app/quote/habitta/veredas_lira/etapa_1/sabino_view.php',
-		controller: 'VLSabinoQuoteCtrl',
-		controllerAs: 'vlSabino'
-	})
-
-	/* Inventary */
-
-	.when('/Veredas_Lira-Sabino-Inventario', {
-		templateUrl: 'application/views/app/dashboard/habitta/veredas_lira/sabino_inventary_view.php',
-		controller: 'VLSabinoCtrl',
-		controllerAs: 'sabino'
-	})
 
 	/******************** 
 	 * Navetec 
@@ -1065,7 +1039,7 @@ app.config(function($routeProvider) {
 
 	/* Quote */
 
-	.when('/Navetec-Sur_57_Business_Park_false', {
+	.when('/Navetec-Sur_57_Business_Park_False', {
 		templateUrl: 'application/views/navetec/quote/sur_57_quote_view.php',
 		controller: 'NvtSurQuoteCtrl',
 		controllerAs: 'nvtSur'
@@ -8440,7 +8414,7 @@ app.controller('NvtAeropuertoQuoteCtrl', function($scope, Inmovables, Developmen
 							nvtAeropuerto.costToBlock = '$30,000 MXN';
 						} else if (row.property_class == 2) {
 							nvtAeropuerto.propertyData.propertyClass = 'Lote industrial';
-							nvtAeropuerto.costToBlock = '$10,000 MXN';
+							nvtAeropuerto.costToBlock = '$20,000 MXN';
 						} else {
 							nvtAeropuerto.propertyData.propertyClass = 'Lote habitacional';
 							nvtAeropuerto.costToBlock = '$10,000 MXN';
@@ -9194,7 +9168,7 @@ app.controller('NvtSurQuoteCtrl', function($scope, Inmovables, Developments, Sta
 
 
 
-/***** SUR 57  22 FEBRERO 23*****/
+/***** SUR 57 NUEVO  27 ABRIL 23*****/
 app.controller('NvtSurNuevoQuoteCtrl', function($scope, Inmovables, Developments, Status) {
 
 	var nvtSurNuevo = this;
@@ -12874,7 +12848,7 @@ app.controller('PBBMalaquitaQuoteCtrl', function($scope, Inmovables, Moment) {
 	}
 
 	let init = function() {
-		Inmovables.getInmovablesData(12, 29).then(function(response) {
+		Inmovables.getInmovablesData(12, 24).then(function(response) {
 			inmovablesData = response;
 			malaquita.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
 		});
@@ -13026,11 +13000,11 @@ app.controller('ContactMenuCtrl', function DemoCtrl($mdDialog, $window, $locatio
 	};
 
 	this.toWhatsapp = function() {
-		$window.location.href = 'https://wa.me/5214421275214?text=Me%20gustaría%20saber%20más%20acerca%20de%20Portto%20Blanco';
+		$window.location.href = 'https://wa.me/5214422912223?text=Me%20gustaría%20saber%20más%20acerca%20de%20Portto%20Blanco';
 	}
 
 	this.toCall = function() {
-		$window.location.href = 'tel:+5214421275214';
+		$window.location.href = 'tel:+5214422912223';
 	}
 
 	this.toPBEstepa = function() {
