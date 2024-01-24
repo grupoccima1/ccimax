@@ -14,6 +14,8 @@ header("Pragma: no-cache");
 // $db_pass = 'GBUD0G2j6N*7';
 // $db_name = 'bbbme11_ccima';
 
+// $db_name = 'bbbme11_ccima';
+
 $db_host = 'localhost';
 $db_user = 'root';
 $db_pass = '';
