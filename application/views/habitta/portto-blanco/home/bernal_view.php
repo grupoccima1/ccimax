@@ -106,6 +106,16 @@
                                         <span>Malaquita</span>
                                     </div>
                                 </a>
+                                <a href="#!/Portto_Blanco-Bernal/Opalo_1" ng-click="close()">
+                                    <div class="link-sidenav">
+                                        <span>Ópalo 1</span>
+                                    </div>
+                                </a>
+                                <a href="#!/Portto_Blanco-Bernal/Opalo_2" ng-click="close()">
+                                    <div class="link-sidenav">
+                                        <span>Ópalo 2</span>
+                                    </div>
+                                </a>
                                 <md-menu-divider></md-menu-divider>
                             </md-menu-content>
                         </md-menu>
@@ -142,6 +152,16 @@
                             <a href="#!/Portto_Blanco-Bernal/Malaquita" ng-click="close()">
                                 <div class="link-sidenav">
                                     <span>Malaquita</span>
+                                </div>
+                            </a>
+                            <a href="#!/Portto_Blanco-Bernal/Opalo_1" ng-click="close()">
+                                <div class="link-sidenav">
+                                    <span>Ópalo 1</span>
+                                </div>
+                            </a>
+                            <a href="#!/Portto_Blanco-Bernal/Opalo_2" ng-click="close()">
+                                <div class="link-sidenav">
+                                    <span>Ópalo 2</span>
                                 </div>
                             </a>
                         </md-menu-content>

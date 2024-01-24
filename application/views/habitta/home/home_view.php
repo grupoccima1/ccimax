@@ -95,10 +95,10 @@
                     <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/logo.svg">
                 </a>
                 <div class="p-40"></div>
-                <a href="#!/Portto_Blanco-Lomas">
+                <!-- <a href="#!/Portto_Blanco-Lomas">
                     <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/lomas_pb_logo.svg">
                 </a>
-                <div class="p-40"></div>
+                <div class="p-40"></div> -->
                 <a href="#!/Portto_Blanco-Bernal">
                     <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/logo_bernal.svg">
                 </a>
