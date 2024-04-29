@@ -564,6 +564,12 @@ app.config(function($routeProvider) {
 		controller: 'PBArrecifeQuoteCtrl',
 		controllerAs: 'arrecife'
 	})
+	.when('/Portto_Blanco-Arrecife_2', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_2_quote.php',
+		controller: 'PBArrecifeQuoteCtrl',
+		controllerAs: 'arrecife'
+	})
+
 	.when('/Portto_Blanco-Arrecife_3', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_3_quote.php',
 		controller: 'PBArrecifeQuoteCtrl',
@@ -734,6 +740,18 @@ app.config(function($routeProvider) {
 		controller: 'PBBOpaloQuoteCtrl',
 		controllerAs: 'opalo'
 	})
+
+/***** Jade *****/
+.when('/Portto_Blanco-Bernal/Jade', {
+	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/jade_quote.php',
+	controller: 'PBBJadeQuoteCtrl',
+	controllerAs: 'jade'
+})
+.when('/Portto_Blanco-Bernal/Jade_1', {
+	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/condos/jade_1_quote.php',
+	controller: 'PBBJadeQuoteCtrl',
+	controllerAs: 'jade'
+})
 
 	/********** Veredas de Lira **********/
 	
@@ -12965,6 +12983,116 @@ app.controller('PBBOpaloQuoteCtrl', function($scope, Inmovables, Moment) {
 	init();
 
 });
+/********** lanzamiento OPALO 16 septiembre 2023 **********/
+app.controller('PBBJadeQuoteCtrl', function($scope, Inmovables, Moment) {
+	
+	let jade = this;
+
+	jade.month = Moment.month();
+	jade.nextMonth = Moment.nextMonth();
+	jade.year = Moment.year();
+	
+	let inmovablesData = [];
+	jade.inmovablesClassList = [];
+	jade.propertyData = [];
+
+	jade.dialogDisplay = 'hide';
+
+	let discountPlan1 = .25;
+	let discountPlan2 = .20;
+
+	jade.showPropertyData = function(idCondominium, number) {
+
+		angular.forEach(inmovablesData.inmovables, function(row, key) {
+
+			if (row.number == number && row.idCondominium == idCondominium) {
+
+				for (let indexCondos = 0; indexCondos < inmovablesData.condos.length; indexCondos++) {
+
+					if (inmovablesData.inmovables[key].idCondominium == inmovablesData.condos[indexCondos].idCondominium) {
+
+						jade.propertyData.condominium = inmovablesData.condos[indexCondos].condominium;
+	
+						break;
+	
+					}
+	
+				}
+
+				if (row.property_class == 1) {
+					jade.propertyData.propertyClass = 'Nave industrial';
+					jade.costToBlock = '$30,000 MXN';
+				} else if (row.property_class == 2) {
+					jade.propertyData.propertyClass = 'Lote industrial';
+					jade.costToBlock = '$10,000 MXN';
+				} else {
+					jade.propertyData.propertyClass = 'Lote habitacional';
+					jade.costToBlock = '$10,000 MXN';
+				}
+				
+				for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+
+					if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+
+						jade.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+						jade.propertyData.cost_m2 = inmovablesData.propertyTypes[indexType].cost_m2;
+						break;
+	
+					}
+	
+				}
+
+				if (inmovablesData.inmovables[key].cost_m2_increase != null) {
+					jade.propertyData.cost_m2 += jade.propertyData.cost_m2 * inmovablesData.inmovables[key].cost_m2_increase.value;
+				}
+
+				jade.propertyData.number = row.number;
+				jade.propertyData.area = row.area;
+				let total = jade.propertyData.cost_m2 * jade.propertyData.area;
+				jade.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+
+				let totalDiscountPlan1 = total - (total * discountPlan1);
+				if (key == 27) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+				if (key == 150) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+
+				jade.propertyData.discountPlan1 = discountPlan1 * 100;
+				jade.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				let totalDiscountPlan2 = total - (total * discountPlan2);
+				jade.propertyData.discountPlan2 = discountPlan2 * 100;
+				jade.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+			
+				jade.openDialog();
+
+			}
+
+		});
+
+	}
+
+	jade.openDialog = function() {
+		jade.dialogDisplay = '';
+	}
+
+	jade.closeDialog = function() {
+		jade.dialogDisplay = 'hide';
+	}
+
+	let init = function() {
+		Inmovables.getInmovablesData(12, 31).then(function(response) {
+			inmovablesData = response;
+			jade.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+		});
+	}
+
+	init();
+
+});
+
+
 /********** Menu **********/
 
 app.controller('ContactMenuCtrl', function DemoCtrl($mdDialog, $window, $location) {
