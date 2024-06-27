@@ -171,39 +171,6 @@
 					</div>
 
 					<div class="divider"></div>
-<!-- 
-					<div class="py-20 ">
-					<h5 class="center-align grey-text futura-book">Promociones de Lanzamiento Digital</h5>
-					</div>
-					
-					<div class="divider"></div>
-
-					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">{{paramo.propertyData.discountPlan1}}% para propiedades pagadas de contado al 100%</h6>
-						<h6 class="green-text futura-light">Precio de ${{paramo.propertyData.totalPlan1}} MXN</h6>
-						<p class="promo__description grey-text">¡Oferta limitada!</p>
-					</div>
-					
-					<div class="divider"></div>
-
-					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">{{paramo.propertyData.discountPlan2}}% de descuento para propiedades con financiamiento hasta 180 Meses</h6>
-						<h6 class="green-text futura-light">Precio de ${{paramo.propertyData.totalPlan2}} MXN</h6>
-						<p class="promo__description grey-text">¡Oferta limitada!</p>
-					</div>
-
-					<div class="divider"></div>
-					
-					<div class="divider"></div>
-
-					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">Compra en {{paramo.month}} y paga la primera mensualidad hasta {{paramo.nextMonth}}</h6>
-						<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
-						<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en {{paramo.month + ' ' + paramo.year}}</p>
-					</div>
-					
-					<div class="divider"></div> -->
-
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
 						<p class="green-text">Con tan solo $5,000 MXN</p>

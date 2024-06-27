@@ -211,7 +211,7 @@
 
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 						<a href="https://pay.billpocket.com/habitta" class="btn blue-bg no__shadow futura-bold">Apártar ahora</>
 					</a>
 				</div>

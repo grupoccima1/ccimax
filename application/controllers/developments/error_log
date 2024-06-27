@@ -399,3 +399,12 @@
 [15-Dec-2021 13:30:20 America/Chicago] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in /home1/bbbme11/public_html/application/models/models.php on line 101
 [15-Dec-2021 13:30:20 America/Chicago] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in /home1/bbbme11/public_html/application/models/models.php on line 101
 [30-Dec-2021 21:12:40 America/Chicago] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in /home1/bbbme11/public_html/application/models/models.php on line 101
+[07-Feb-2024 14:42:27 UTC] PHP Warning:  Undefined array key "idProperty" in /home/bbbme11/public_html/application/controllers/developments/select_property_by_id.php on line 20
+[07-Feb-2024 14:42:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in /home/bbbme11/public_html/application/models/models.php:91
+Stack trace:
+#0 /home/bbbme11/public_html/application/models/models.php(91): mysqli_stmt->execute()
+#1 /home/bbbme11/public_html/application/models/models.php(22): Models->select('SELECT property...', NULL, 'i')
+#2 /home/bbbme11/public_html/application/controllers/inmovables/inmovables.php(193): Models->selectBy('property_class,...', 'inmovables', 'idProperty', NULL, 'i')
+#3 /home/bbbme11/public_html/application/controllers/developments/select_property_by_id.php(20): Inmovables->selectPropertyById(NULL)
+#4 {main}
+  thrown in /home/bbbme11/public_html/application/models/models.php on line 91

@@ -11,22 +11,7 @@
     <title>Grupo CCIMA</title>
 
     <script type="text/javascript" src="media/assets/js/analytics.js"></script>
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '318023479184677');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=318023479184677&ev=PageView&noscript=1"/>
-    </noscript>
+    <meta name="facebook-domain-verification" content="vom00ut6x9dzl1yfhok6gv0chtpztf" />
     <!-- End Facebook Pixel Code -->
     <link rel="stylesheet" type="text/css" href="media/bower_components/materialize/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="media/assets/css/style.css">
@@ -81,12 +66,6 @@
         <a href="#!" ng-click="close()">
             <div class="link-body link-nav">
                 Inicio
-            </div>
-        </a>
-        <md-divider></md-divider>
-        <a href="#!/cotizador" ng-click="close()">
-            <div class="link-body link-nav">
-                Cotizador
             </div>
         </a>
         <md-divider></md-divider>
@@ -179,10 +158,6 @@
                     <div class="bg_transparent">
                         <div class="home-titulo">
                             <h1 class="headline-header white-text  ">NUEVO DESARROLLO <br>PORTTO BLANCO BERNAL</h1>
-                            <!-- <h5 class="header-description white-text ">Somos el Aliado Estratégico de América.<br> Creamos Inversiones Extraordinarias</h5> -->
-                            <!-- <div class="lago-cluster">-->
-                            <!--     <a href="https://grupoccima.com/#!/Portto_Blanco-Manglar" > Ver Disponibilidad</a> -->
-                            <!--</div> -->
                         </div>
                     </div>
                 </div>
@@ -334,7 +309,7 @@
             <div id="counter" class="row py-80">
                 <div class="col s12 m6 l3">
                     <div class="p-420">
-                        <h2 class="center-align">+<span class="count" data-value="20">0</span></h2>
+                        <h2 class="center-align">+<span class="count" data-value="21">0</span></h2>
                         <p class="center-align">AÑOS DE EXPERIENCIA</p>
                     </div>
                 </div>
@@ -448,49 +423,6 @@
         </div>
         <div class="pb-80"></div>
     </section>
-    <!-- <section class="py-40 lighten-5">
-   <h3 class="center py-80"><span style="font-weight: lighter;">NUESTRO</span> BLOG</h3>
-   <div class="row">
-   <div class="col s12 l4">
-   <div class="p-420">
-   <a href=" https://blog.grupo-ccima.com/post_01.html"style="color:#000000de;" target="_blank"> 
-   <img class="" src="media/assets/img/blog/01.jpg" alt="El impacto de la tecnologia en el sector inmobiliario en tiempos de crisis" width="100%">
-   <div class="">
-                            
-   <h5 class="" style="padding-bottom: 26px;">4 plataformas para invertir de forma inteligente </h5>
-   <p style="text-align: justify;">Al invertir, pones a trabajar tu dinero para en un futuro poder generar un patrimonio, pero para lograr esto, es básico que primero conozcas las mejores plataformas para hacerlo.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-   <div class="col s12 l4">
-   <div class="p-420">
-   <a href=" https://blog.grupo-ccima.com/post_02.html"style="color:#000000de;" target="_blank"> 
-   <img class="" src="media/assets/img/blog/02.jpg" alt="5 razones por las que debes emprender en tu negocio propio" width="100%">
-   <div class="">
-                            
-   <h5 class="" >5 razones por las que debes emprender en tu negocio propio</h5>
-   <p style="text-align: justify;">Emprender tiene múltiples ventajas, verás que adentrarte en este camino traerá grandes beneficios para ti, conoce 5 razones por las que deberías hacerlo. </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-   <div class="col s12 l4">
-   <div class="p-420">
-   <a href=" https://blog.grupo-ccima.com/post_03.html"style="color:#000000de;" target="_blank"> 
-   <img class="" src="media/assets/img/blog/03.jpg" alt="El impacto de la tecnologia en el sector inmobiliario en tiempos de crisis" width="100%">
-   <div class="">
-                            
-   <h5 class="" style="">El impacto de la tecnología en el sector inmobiliario en tiempos de crisis </h5>
-   <p style="text-align: justify;">Después de la crisis del 2008, el sector inmobiliario quedó muy vulnerable y estancado, gracias a la tecnología y la transformación digital, la industria revolucionó.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-   <div class="pb-80"></div>
-    </section>-->
-
 
 
 

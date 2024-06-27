@@ -187,7 +187,7 @@
 					<div class="divider"></div>
 
 					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">{{jade.propertyData.discountPlan2}}% de descuento para propiedades con financiamiento hasta 180 Meses</h6>
+						<h6 class="deep-purple-text futura-light">{{jade.propertyData.discountPlan2}}% de descuento para propiedades con financiamiento</h6>
 						<h6 class="green-text futura-light">Precio de ${{jade.propertyData.totalPlan2}} MXN</h6>
 						<p class="promo__description grey-text">¡Oferta limitada!</p>
 					</div>
@@ -197,7 +197,7 @@
 					<div class="divider"></div>
 
 					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">Compra en {{jade.month}} y paga la primera mensualidad hasta {{jade.nextMonth}}</h6>
+						<h6 class="deep-purple-text futura-light">Compra en {{jade.month}} y paga la primera mensualidad hasta Junio</h6>
 						<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
 						<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en {{jade.month + ' ' + jade.year}}</p>
 					</div>
@@ -206,7 +206,7 @@
 
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 					</a>
 				</div>
 
@@ -1292,7 +1292,7 @@
 			<polyline class="st4" points="809.1,1365.7 809.1,1379.8 802,1372.7 809.1,1365.7 			"/>
 			<polyline class="st5" points="809.1,1365.7 816.1,1372.7 809.1,1379.8 809.1,1365.7 			"/>
 		</g>
-		<g id="E-74" class="property__active" ng-class="jade.inmovablesClassList[73]" ng-click="jade.showPropertyData(70, '74')">
+		<g id="E-74"  class="property__active" ng-class="jade.inmovablesClassList[73]" ng-click="jade.showPropertyData(70, '74')">
 			<polyline class="property pb-sprite-2" points="769.2,1263.6 769.2,1396.4 709.4,1396.4 709.4,1263.6 769.2,1263.6 			"/>
 			<text transform="matrix(1 0 0 1 730.29 1273.55)" class="st1 st2 st3">9.0</text>
 			<text transform="matrix(1 0 0 1 743.19 1273.55)" class="st1 st2 st3">0</text>

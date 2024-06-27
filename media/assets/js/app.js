@@ -96,14 +96,17 @@ app.config(function($routeProvider) {
 	.when('/', {
 		templateUrl: 'application/views/home/home_view.php'
 	})
+	
 	.when('/terminos_condiciones', {
-		templateUrl: 'application/views/home/terminos_view.php'
+		templateUrl: 'application/views/home/terminos_view.php',
 	})
 
+	
 	.when('/politicas_de_privacidad', {
 		templateUrl: 'application/views/home/politicas_privacidad.php'
 	})
 	
+
 	/********** Application **********/
 
 	.when('/login', {
@@ -170,6 +173,8 @@ app.config(function($routeProvider) {
 		controllerAs: 'dashboard'
 	})
 	
+
+
 	/***** Users *****/
 
 	.when('/users', {
@@ -188,6 +193,7 @@ app.config(function($routeProvider) {
 		controllerAs: 'dashboard'
 	})
 
+    
 	
 	/***** Developments *****/
 
@@ -425,7 +431,6 @@ app.config(function($routeProvider) {
 		controller: 'PBParamoCtrl',
 		controllerAs: 'paramo'
 	})
-	
 	.when('/Portto_Blanco-Paramo_3-Inventario', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/paramo/condos/paramo_3_inventary.php',
 		controller: 'PBParamoCtrl',
@@ -569,15 +574,13 @@ app.config(function($routeProvider) {
 		controller: 'PBArrecifeQuoteCtrl',
 		controllerAs: 'arrecife'
 	})
-
 	.when('/Portto_Blanco-Arrecife_3', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_3_quote.php',
 		controller: 'PBArrecifeQuoteCtrl',
 		controllerAs: 'arrecife'
 	})
 
-	
-	/*****Tundra*****/
+    /*****Tundra*****/
 	.when('/Portto_Blanco-Tundra', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/tundra/tundra_quote.php',
 		controller: 'PBTundraQuoteCtrl',
@@ -588,7 +591,6 @@ app.config(function($routeProvider) {
 		controller: 'PBTundraQuoteCtrl',
 		controllerAs: 'tundra'
 	})
-
 
 
     /***** LOMAS*****/
@@ -719,7 +721,8 @@ app.config(function($routeProvider) {
 		controller: 'PBBMalaquitaQuoteCtrl',
 		controllerAs: 'malaquita'
 	})
-/***** Opalo *****/
+
+    /***** Opalo *****/
 	.when('/Portto_Blanco-Bernal/Opalo', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/opalo_quote.php',
 		controller: 'PBBOpaloQuoteCtrl',
@@ -740,18 +743,20 @@ app.config(function($routeProvider) {
 		controller: 'PBBOpaloQuoteCtrl',
 		controllerAs: 'opalo'
 	})
+	
+    	/***** Jade *****/
+    .when('/Portto_Blanco-Bernal/Jade', {
+    	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/jade_quote.php',
+    	controller: 'PBBJadeQuoteCtrl',
+    	controllerAs: 'jade'
+    })
+    .when('/Portto_Blanco-Bernal/Jade_1', {
+    	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/condos/jade_1_quote.php',
+    	controller: 'PBBJadeQuoteCtrl',
+    	controllerAs: 'jade'
+    })
 
-/***** Jade *****/
-.when('/Portto_Blanco-Bernal/Jade', {
-	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/jade_quote.php',
-	controller: 'PBBJadeQuoteCtrl',
-	controllerAs: 'jade'
-})
-.when('/Portto_Blanco-Bernal/Jade_1', {
-	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/condos/jade_1_quote.php',
-	controller: 'PBBJadeQuoteCtrl',
-	controllerAs: 'jade'
-})
+
 
 	/********** Veredas de Lira **********/
 	
@@ -955,6 +960,23 @@ app.config(function($routeProvider) {
 		controller: 'NvtCalamandaQuoteCtrl',
 		controllerAs: 'nvtCalamanda'
 	})
+	/* Quote Calamanda 2*/
+
+	.when('/Navetec-Calamanda_Business_Park_2', {
+		templateUrl: 'application/views/navetec/quote/calamanda_quote_view_ii.php',
+		controller: 'NvtCalamandaDosQuoteCtrl',
+		controllerAs: 'nvtCalamanda'
+	})
+	.when('/Navetec-Calamanda_ModuloA_Business_Park_2', {
+		templateUrl: 'application/views/navetec/quote/calamanda_moduloa_quote_view_ii.php',
+		controller: 'NvtCalamandaDosQuoteCtrl',
+		controllerAs: 'nvtCalamanda'
+	})
+	.when('/Navetec-Calamanda_ModuloB_Business_Park_2', {
+		templateUrl: 'application/views/navetec/quote/calamanda_modulob_quote_view_ii.php',
+		controller: 'NvtCalamandaDosQuoteCtrl',
+		controllerAs: 'nvtCalamanda'
+	})
 
 	
 	/***** La Presa *****/
@@ -1073,7 +1095,11 @@ app.config(function($routeProvider) {
 		controller: 'NvtSurNuevoQuoteCtrl',
 		controllerAs: 'nvtSurNuevo'
 	})
-
+	.when('/Navetec-Sur_57_E3_Business_Park', {
+		templateUrl: 'application/views/navetec/quote/sur_57_iii_quote_view.php',
+		controller: 'NvtSurNuevoQuoteCtrl',
+		controllerAs: 'nvtSurNuevo'
+	})
 	/***** Conekta *****/
 
 	/* Payment */
@@ -9071,6 +9097,117 @@ app.controller('NvtCalamandaQuoteCtrl', function($scope, Inmovables, Development
 	init();
 
 });
+/***** CALAMANDA  04 junio 2024*****/
+app.controller('NvtCalamandaDosQuoteCtrl', function($scope, Inmovables, Developments, Status) {
+
+	var nvtCalamanda = this;
+	var inmovables = Inmovables;
+	
+	var inmovablesData = [];
+	nvtCalamanda.inmovablesClassList = [];
+	nvtCalamanda.propertyData = [];
+
+	nvtCalamanda.dialogDisplay = 'hide';
+
+	var discountPlan1 = .25;
+	var discountPlan2 = .20;
+
+	nvtCalamanda.showPropertyData = function(idCondominium, number, idProperty) {
+		
+		Developments.selectPropertyById(idProperty).then(function(response) {
+
+			if (Status.checkHttpStatusCode(response.status)) {
+
+				nvtCalamanda.property = response.property;
+				nvtCalamanda.property.sample = {};
+
+				nvtCalamanda.property.sample.m2 = (nvtCalamanda.property.cost.increase.m2 > 0) ? nvtCalamanda.property.cost.increase.m2 : nvtCalamanda.property.cost.m2;
+				nvtCalamanda.property.sample.property = nvtCalamanda.property.sample.m2 * nvtCalamanda.property.area;
+
+				nvtCalamanda.property.sample.discount1 = nvtCalamanda.property.sample.property - (nvtCalamanda.property.sample.property * discountPlan1);
+				nvtCalamanda.property.sample.discount2 = nvtCalamanda.property.sample.property - (nvtCalamanda.property.sample.property * discountPlan2);
+
+				angular.forEach(inmovablesData.inmovables, function(row, key) {
+					if (row.number == number && row.idCondominium == idCondominium) {
+						nvtCalamanda.propertyData.condominium = inmovablesData.condos[0].condominium;
+						if (row.property_class == 1) {
+							nvtCalamanda.propertyData.propertyClass = 'Nave industrial';
+							nvtCalamanda.costToBlock = '$20,000 MXN';
+						} else if (row.property_class == 2) {
+							nvtCalamanda.propertyData.propertyClass = 'Lote industrial';
+							nvtCalamanda.costToBlock = '$10,000 MXN';
+						} else {
+							nvtCalamanda.propertyData.propertyClass = 'Local Comercial';
+							nvtCalamanda.costToBlock = '$10,000 MXN';
+						}
+		
+						for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+		
+							if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+		
+								nvtCalamanda.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+								nvtCalamanda.propertyData.cost_m2 = Number.parseFloat(inmovablesData.propertyTypes[indexType].cost_m2.toFixed(2));
+		
+								break;
+		
+							}
+		
+						}
+		
+						if (row.cost_m2_increase != null) {
+							nvtCalamanda.propertyData.cost_m2 = nvtCalamanda.property.cost.increase.m2;
+							nvtCalamanda.propertyData.cost_m2 = Number.parseFloat(nvtCalamanda.propertyData.cost_m2.toFixed(2));
+						}
+		
+						nvtCalamanda.propertyData.number = row.number;
+						nvtCalamanda.propertyData.area = row.area;
+						var total = nvtCalamanda.propertyData.cost_m2 * nvtCalamanda.propertyData.area;
+						nvtCalamanda.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						var totalDiscountPlan1 = total - (total * discountPlan1);
+						nvtCalamanda.propertyData.discountPlan1 = discountPlan1 * 100;
+						nvtCalamanda.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						var totalDiscountPlan2 = total - (total * discountPlan2);
+						nvtCalamanda.propertyData.discountPlan2 = discountPlan2 * 100;
+						nvtCalamanda.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						nvtCalamanda.openDialog();
+					}
+				});
+
+			} else {
+
+				alert('No se encontro información sobre esta propiedad');
+
+			}
+
+		}, function(response) {
+
+			alert('Revisa tu conexión a internet o contacta a un administrador');
+
+		});
+	}
+
+	nvtCalamanda.openDialog = function() {
+		nvtCalamanda.dialogDisplay = '';
+	}
+
+	nvtCalamanda.closeDialog = function() {
+		nvtCalamanda.dialogDisplay = 'hide';
+	}
+
+	var init = function() {
+
+		Inmovables.getInmovablesData(17, 32).then(function(response) {
+
+			inmovablesData = response;
+			nvtCalamanda.inmovables = response.inmovables;
+			console.log(response.inmovables)
+			nvtCalamanda.inmovablesClassList = inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+
+		});
+	}  //CalamdnaDos
+	init();
+
+});
 
 /***** SUR 57  22 FEBRERO 23*****/
 app.controller('NvtSurQuoteCtrl', function($scope, Inmovables, Developments, Status) {
@@ -12356,6 +12493,8 @@ app.controller('PBTundraQuoteCtrl', function($scope, Inmovables, Moment) {
 
 });
 
+
+
 // LANZAMIENTO DE LOMAS DIEGO 26-01-2022
 
 app.controller('PBLomasQuoteCtrl', function($scope, Inmovables, Moment) {
@@ -12875,6 +13014,7 @@ app.controller('PBBMalaquitaQuoteCtrl', function($scope, Inmovables, Moment) {
 	init();
 
 });
+
 /********** lanzamiento OPALO 16 septiembre 2023 **********/
 app.controller('PBBOpaloQuoteCtrl', function($scope, Inmovables, Moment) {
 	
@@ -12983,6 +13123,7 @@ app.controller('PBBOpaloQuoteCtrl', function($scope, Inmovables, Moment) {
 	init();
 
 });
+
 /********** lanzamiento OPALO 16 septiembre 2023 **********/
 app.controller('PBBJadeQuoteCtrl', function($scope, Inmovables, Moment) {
 	
@@ -13055,7 +13196,10 @@ app.controller('PBBJadeQuoteCtrl', function($scope, Inmovables, Moment) {
 				if (key == 27) {
 					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
 				}
-				if (key == 150) {
+				if (key == 72) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+				if (key == 71) {
 					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
 				}
 

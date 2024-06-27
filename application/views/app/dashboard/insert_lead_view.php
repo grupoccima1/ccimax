@@ -100,6 +100,9 @@
                         </select>
                         <label>Sexo</label>
                     </div>
+                    <div class="input-field col s12 m6">
+                        <input type="file">
+                    </div>
                 </div>
                 <p style="color: red;">{{lead.messageError}}</p>
                 <div class="row">

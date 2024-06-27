@@ -77,12 +77,19 @@
                 Santa Rosa Business Park
             </div>
         </a>
+			<md-divider></md-divider>
+			<a href="#!/Navetec-Sur_57_Business_Park" ng-click="close()">
+            <div class="link-body link-nav">
+                Sur 57 Business Park Etapa 1
+            </div>
+        </a>
 		<md-divider></md-divider>
-		    <a href="#!/Navetec-Sur_57_Business_Park" ng-click="close()">
-                <div class="link-body link-nav">
-                    Sur 57 Business Park
-                </div>
-            </a>
+		<a href="#!/Navetec-Sur_57_E2_Business_Park" ng-click="close()">
+            <div class="link-body link-nav">
+                Sur 57 Business Park Etapa 2 
+            </div>
+        </a>
+		<md-divider></md-divider>
         <md-toolbar class="md-hue-2">
             <h1 class="md-toolbar-tools">NAVIGATION</h1>
         </md-toolbar>
@@ -170,9 +177,9 @@
 
 
 				<div class="p-20">
-					<h6 class="deep-purple-text futura-light">Compra en Marzo y paga la primera mensualidad hasta Mayo 2023</h6>
+					<h6 class="deep-purple-text futura-light">Compra en Octubre y paga la primera mensualidad hasta Noviembre 2023</h6>
 					<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
-					<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Marzo 2023</p>
+					<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Octubre 2023</p> 
 				</div>
 
 				<div class="divider"></div>
@@ -1067,10 +1074,7 @@
 						<text transform="matrix(0.2028 -0.98 0.9792 0.2029 1278.3053 356.5223)"><tspan x="0" y="0" class="st25 st26 st37">34.5</tspan><tspan x="18.6" y="0" class="st25 st26 st37">8</tspan></text>
 						<text transform="matrix(0.2028 -0.98 0.9792 0.2029 1335.6908 368.4083)"><tspan x="0" y="0" class="st25 st26 st37">34.5</tspan><tspan x="18.6" y="0" class="st25 st26 st37">8</tspan></text>
 						<text transform="matrix(0.2028 -0.98 0.9792 0.2029 1291.3466 377.3231)" class="st30 st21 st36">NAVE 12G</text>
-						<g>
-							<polyline class="st33" points="1290.7,413.7 1292,425.7 1285.3,420.4 1290.7,413.7 				"/>
-							<polyline class="st34" points="1297.3,419.1 1292,425.7 1292,425.7 1290.7,413.7 				"/>
-						</g>
+						
 					</g>
 					<g id="LINEAS_DIVISORIAS_MÓDULO_G">
 						<line class="st35" x1="1286.4" y1="245.5" x2="1246.5" y2="438.4"/>
@@ -1195,10 +1199,7 @@
 						<text transform="matrix(0.2028 -0.98 0.9792 0.2029 1236.172 602.522)"><tspan x="0" y="0" class="st25 st26 st37">25.0</tspan><tspan x="18.6" y="0" class="st25 st26 st37">0</tspan></text>
 						<text transform="matrix(0.2028 -0.98 0.9792 0.2029 1286.1499 612.8806)"><tspan x="0" y="0" class="st25 st26 st37">25.0</tspan><tspan x="18.6" y="0" class="st25 st26 st37">0</tspan></text>
 						<text transform="matrix(0.2028 -0.98 0.9792 0.2029 1251.3364 618.0641)" class="st30 st21 st36">NAVE 13H</text>
-						<g>
-							<polyline class="st33" points="1271.8,544.6 1273.1,556.6 1266.4,551.3 1271.8,544.6 				"/>
-							<polyline class="st34" points="1278.5,550 1273.1,556.6 1273.1,556.6 1271.8,544.6 				"/>
-						</g>
+						
 					</g>
 					<g id="LINEAS_DIVISORIAS_MÓDULO_H_1_">
 						<line class="st35" x1="407.2" y1="491.3" x2="1279.5" y2="672.1"/>

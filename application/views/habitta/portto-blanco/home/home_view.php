@@ -138,6 +138,11 @@
 										<span>Arrecife 1</span>
 									</div>
 								</a>
+								<a href="#!/Portto_Blanco-Arrecife_2" ng-click="close()">
+									<div class="link-sidenav">
+										<span>Arrecife 2</span>
+									</div>
+								</a>
 								<a href="#!/Portto_Blanco-Arrecife_3" ng-click="close()">
 									<div class="link-sidenav">
 										<span>Arrecife 3</span>
@@ -176,6 +181,11 @@
                                  <a href="#!/Portto_Blanco-Bernal/Opalo_2" ng-click="close()">
                                     <div class="link-sidenav">
                                         <span>Ópalo 2</span>
+                                    </div>
+                                </a>
+                                 <a href="#!/Portto_Blanco-Bernal/Jade_1" ng-click="close()">
+                                    <div class="link-sidenav">
+                                        <span>Jade 1</span>
                                     </div>
                                 </a>
                             </md-menu-content>
@@ -251,6 +261,11 @@
 										<span>Arrecife 1</span>
 									</div>
 								</a>
+								<a href="#!/Portto_Blanco-Arrecife_2" ng-click="close()">
+									<div class="link-sidenav">
+										<span>Arrecife 2</span>
+									</div>
+								</a>
 							<a href="#!/Portto_Blanco-Arrecife_3" ng-click="close()">
 									<div class="link-sidenav">
 										<span>Arrecife 3</span>
@@ -293,6 +308,11 @@
 								 <a href="#!/Portto_Blanco-Bernal/Opalo_2" ng-click="close()">
                                     <div class="link-sidenav">
                                         <span>Ópalo 2</span>
+                                    </div>
+                                </a>
+                                 <a href="#!/Portto_Blanco-Bernal/Jade_1" ng-click="close()">
+                                    <div class="link-sidenav">
+                                        <span>Jade 1</span>
                                     </div>
                                 </a>
                         </md-menu-content>

@@ -82,7 +82,13 @@
 		<md-divider></md-divider>
 			<a href="#!/Navetec-Sur_57_Business_Park" ng-click="close()">
             <div class="link-body link-nav">
-                Sur 57 Business Park
+                Sur 57 Business Park Etapa 1
+            </div>
+        </a>
+		<md-divider></md-divider>
+		<a href="#!/Navetec-Sur_57_E2_Business_Park" ng-click="close()">
+            <div class="link-body link-nav">
+                Sur 57 Business Park Etapa 2 
             </div>
         </a>
 		<md-divider></md-divider>
@@ -189,19 +195,19 @@
 				
 				<div class="divider"></div>
 
-				<div class="p-20">
-					<h6 class="deep-purple-text futura-light">10% de descuento sobre le monto de enganche</h6>
-					<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
-					<p class="promo__description grey-text">*Valido hasta {{nvtAeropuerto.month + ' ' + nvtAeropuerto.year}}</p>
-				</div>
+				<!--<div class="p-20">-->
+				<!--	<h6 class="deep-purple-text futura-light">10% de descuento sobre le monto de enganche</h6>-->
+				<!--	<p class="promo__description grey-text">*Pagando el 100% de enganche</p>-->
+				<!--	<p class="promo__description grey-text">*Valido hasta {{nvtAeropuerto.month + ' ' + nvtAeropuerto.year}}</p>-->
+				<!--</div>-->
 
-				<div class="divider"></div>
+				<!--<div class="divider"></div>-->
 
-				<div class="p-20">
-					<h6 class="deep-purple-text futura-light">Compra en Enero y paga la primera mensualidad hasta Febrero</h6>
-					<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
-					<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Enero  2023</p>
-				</div>
+				<!--<div class="p-20">-->
+				<!--	<h6 class="deep-purple-text futura-light">Compra en Enero y paga la primera mensualidad hasta Febrero</h6>-->
+				<!--	<p class="promo__description grey-text">*Pagando el 100% de enganche</p>-->
+				<!--	<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Enero  2023</p>-->
+				<!--</div>-->
 
 				<div class="divider"></div>
 

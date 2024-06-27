@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="es_MX">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" contet="ie=edge">
     <meta name="author" content="Ing. Saúl Fernando Torres Hernández">
     <meta name="description" content="Grúpo CCIMA S.A. de C.V." />
-    <meta name="keywords"
-        content="grupo ccima, navetec, constructora, servicio de construccion, desarrolladora, llave en mano, built to suit, renta de maquinaria, renta de gruas, maquinaria pesada para construccion, naves industriales, renta naves industriales, venta naves industriales, parques industriales, terrenos, terrenos industriales, terrenos habitacionales, bienes raices, inmobiliaria" />
+    <meta name="keywords" content="grupo ccima, navetec, constructora, servicio de construccion, desarrolladora, llave en mano, built to suit, renta de maquinaria, renta de gruas, maquinaria pesada para construccion, naves industriales, renta naves industriales, venta naves industriales, parques industriales, terrenos, terrenos industriales, terrenos habitacionales, bienes raices, inmobiliaria" />
 
     <title>Grupo CCIMA Terminos y Condiciones</title>
 
     <script type="text/javascript" src="media/assets/js/analytics.js"></script>
     <!-- Facebook Pixel Code -->
     <script>
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '318023479184677');
         fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=318023479184677&ev=PageView&noscript=1" />
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=318023479184677&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
     <link rel="stylesheet" type="text/css" href="media/bower_components/materialize/css/materialize.min.css">
@@ -52,7 +39,6 @@
     <script src="media/assets/js/video.js"></script>
 
 </head>
-
 <body>
     <md-sidenav class="cc-sidenav md-sidenav-left md-whiteframe-4dp" md-component-id="left">
         <md-toolbar class="md-hue-2">
@@ -60,15 +46,13 @@
         </md-toolbar>
         <a href="#!/habitta" ng-click="close()">
             <div class="link-body link-dev valign-wrapper">
-                <span class="" style="width: 66%;">Desarrollo Habitacional</span><img class=""
-                    src="media/assets/img/logos/logo-habitta.svg" height="18">
+                <span class="" style="width: 66%;">Desarrollo Habitacional</span><img class="" src="media/assets/img/logos/logo-habitta.svg" height="18">
             </div>
         </a>
         <md-divider></md-divider>
         <a href="#!/Navetec" ng-click="close()">
             <div class="link-body link-dev valign-wrapper">
-                <span class="" style="width: 66%;">Desarrollo Industrial</span><img class=""
-                    src="media/assets/img/logos/logo-navetec.svg" height="28">
+                <span class="" style="width: 66%;">Desarrollo Industrial</span><img class="" src="media/assets/img/logos/logo-navetec.svg" height="28">
             </div>
         </a>
         <!--md-divider></!--md-divider>
@@ -113,13 +97,9 @@
                 <div class="container">
                     <ul>
                         <li><a href="#!" class="nav-logo"><img src="media/assets/img/logos/logo.png"></a></li>
-                        <li class="right">
-                            <md-button class="md-icon-button md-noink" ng-click="toggleLeft()">
-                                <svg viewBox="0 0 24 24" width="24">
-                                    <path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z" fill="#5F6368"></path>
-                                </svg>
-                            </md-button>
-                        </li>
+                        <li class="right"><md-button class="md-icon-button md-noink" ng-click="toggleLeft()">
+                            <svg viewBox="0 0 24 24" width="24"><path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z" fill="#5F6368"></path></svg>
+                        </md-button></li>
                         <!-- <li class="right"><md-button class="md-raised md-primary btn-lg" ng-click="toQuote()">COTIZAR AQUÍ</md-button></li> -->
                     </ul>
                 </div>
@@ -127,8 +107,8 @@
         </nav>
     </div>
     <div class="container">
-
-        <h2 class="futura-demi" style="text-align: center;">Aviso de privacidad</h2>
+        
+         <h2 class="futura-demi" style="text-align: center;">Aviso de privacidad</h2>
 
         <ol>
             <li>Definición.</li>
@@ -210,23 +190,19 @@
                 </div>
                 <form class="col s12 m7" ng-submit="main.sendEmail()">
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" name="name" class="validate" autocomplete="off" required
-                            ng-model="main.name">
+                        <input id="first_name" type="text" name="name" class="validate" autocomplete="off" required ng-model="main.name">
                         <label for="first_name">¿Cómo te llamas?</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="email" type="email" name="email" class="validate" autocomplete="off" required
-                            ng-model="main.email">
+                        <input id="email" type="email" name="email" class="validate" autocomplete="off" required ng-model="main.email">
                         <label for="email">Compartenos tu Correo electrónico @</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="tel" type="tel" name="phone" class="validate" autocomplete="off"
-                            ng-model="main.phone">
+                        <input id="tel" type="tel" name="phone" class="validate" autocomplete="off" ng-model="main.phone">
                         <label for="tel">Si lo prefieres, dejanos tu Télefono (opcional)</label>
                     </div>
                     <div class="input-field col s12">
-                        <textarea id="textarea1" name="details" class="materialize-textarea" autocomplete="off"
-                            maxlength="120" required ng-model="main.message"></textarea>
+                        <textarea id="textarea1" name="details" class="materialize-textarea" autocomplete="off" maxlength="120" required ng-model="main.message"></textarea>
                         <label for="textarea1">¡Cuéntanos sobre tu proyecto!</label>
                     </div>
                     <button class="waves-effect waves-teal btn right w100" type="submit">
@@ -238,13 +214,9 @@
                     <div class="py-40">
                         <h4>Contactanos</h4>
                         <ul>
-                            <li class="py-10">Dirección: <a class=""
-                                    href="https://www.google.com.mx/maps/place/GRUPO+CCIMA+S.A.+DE+C.V./@20.7207906,-100.4411124,17z/data=!3m1!4b1!4m5!3m4!1s0x85d359d5e049ded3:0xdbdc71bed86b2fb3!8m2!3d20.7207906!4d-100.4389237">Carretera
-                                    Federal 57, KM 17.5, Santa Rosa Jáuregui, C.P. 76220, Santiago de Querétaro,
-                                    Qro.</a></li>
+                            <li class="py-10">Dirección: <a class="" href="https://www.google.com.mx/maps/place/GRUPO+CCIMA+S.A.+DE+C.V./@20.7207906,-100.4411124,17z/data=!3m1!4b1!4m5!3m4!1s0x85d359d5e049ded3:0xdbdc71bed86b2fb3!8m2!3d20.7207906!4d-100.4389237">Carretera Federal 57, KM 17.5, Santa Rosa Jáuregui, C.P. 76220, Santiago de Querétaro, Qro.</a></li>
                             <li class="py-10">Teléfono: <a class="" href="tel:+524422912223"> 442 291 2223</a></li>
-                            <li class="py-10">Correo: <a class=""
-                                    href="mailto:hola@grupoccima.com">hola@grupoccima.com</a></li>
+                            <li class="py-10">Correo: <a class="" href="mailto:hola@grupoccima.com">hola@grupoccima.com</a></li>
                             <li class="py-10">Abrimos: Lun-Vie: 8 am-6:30 pm</li>
                         </ul>
                     </div>
@@ -281,5 +253,4 @@
     </footer>
 
 </body>
-
 </html>

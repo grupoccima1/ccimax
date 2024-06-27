@@ -209,7 +209,7 @@
 
 					<div class="p-20">
 						<h6 class="deep-purple-text futura-light">Compra en {{ zafiro.month }} y paga la primera
-							mensualidad hasta Junio</h6>
+							mensualidad hasta Noviembre</h6>
 						<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
 						<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas
 							en {{ zafiro.month + ' ' + zafiro.year }}</p>
@@ -235,7 +235,7 @@
 					<md-menu-content width="4">
 						<md-menu-item>
 							<md-button disabled="disabled">
-								+52 1 442 291 2223
+                                +52 1 442 291 2223
 							</md-button>
 						</md-menu-item>
 						<md-menu-divider></md-menu-divider>

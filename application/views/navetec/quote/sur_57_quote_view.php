@@ -164,9 +164,9 @@
 
 				<div class="divider"></div>
 
-				<div class="py-20 ">
-					<h5 class="center-align grey-text futura-book">Promociones de Lanzamiento Digital</h5>
-				</div>
+				<!--<div class="py-20 ">-->
+				<!--	<h5 class="center-align grey-text futura-book">Promociones de Lanzamiento Digital</h5>-->
+				<!--</div>-->
 				
 				<!-- <div class="divider"></div>
 
@@ -187,11 +187,11 @@
 				<div class="divider"></div>
 
 
-				<div class="p-20">
-					<h6 class="deep-purple-text futura-light">Compra en Marzo y paga la primera mensualidad hasta Mayo 2023</h6>
-					<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
-					<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Marzo 2023</p>
-				</div>
+				<!--<div class="p-20">-->
+				<!--	<h6 class="deep-purple-text futura-light">Compra en Marzo y paga la primera mensualidad hasta Mayo 2023</h6>-->
+				<!--	<p class="promo__description grey-text">*Pagando el 100% de enganche</p>-->
+				<!--	<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Marzo 2023</p>-->
+				<!--</div>-->
 
 				<div class="divider"></div>
 
@@ -1135,7 +1135,7 @@
 			<text transform="matrix(0.9866 0.2027 -0.2043 0.9789 1086.483 796.4218)" class="st4 st5 st14">14.0</text>
 			<text transform="matrix(0.9866 0.2027 -0.2043 0.9789 1103.8469 799.9892)" class="st4 st5 st14">0</text>
 			<text transform="matrix(0.9866 0.2027 -0.2043 0.9789 1048.5054 978.41)" class="st4 st5 st14">14.0</text>
-			<text transform="matrix(0.9866 0.2027 -0.2043 0.9789 1065.8693 981.9774)" class="st4 st5 st14">0</text>
+			<text transform="matrix(0.9866 0.2027 -0.2043 0.9789 1065.8693 981.9774)" class="st4 st5 st14">0</text> 
 			<text transform="matrix(0.2028 -0.9719 0.9795 0.2013 1051.2122 891.1326)" class="st4 st5 st16">38.7</text>
 			<text transform="matrix(0.2028 -0.9719 0.9795 0.2013 1054.8018 873.9299)" class="st4 st5 st16">0</text>
 		</g>

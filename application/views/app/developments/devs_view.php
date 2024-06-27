@@ -171,11 +171,16 @@
 													Beta Completo
 												</md-button>
 											</md-menu-item>
-											<md-menu-item>
+											<!-- <md-menu-item>
 												<md-button href="#!/inventary/layouts/Calamanda">
 													Calamanda
 												</md-button>
-											</md-menu-item>
+											</md-menu-item>  -->
+											<md-menu-item>
+												<md-button href="#!/inventary/layouts/Calamanda%202">
+													Calamanda 2
+												</md-button>
+											</md-menu-item> 
 											
 											<md-menu-item>
 												<md-button href="#!/inventary/layouts/Gamma">
@@ -309,6 +314,11 @@
 												</md-button>
 											</md-menu-item>
 											<md-menu-item>
+												<md-button href="#!/inventary/layouts/arrecife%202">
+													Arrecife 2
+												</md-button>
+											</md-menu-item>
+											<md-menu-item>
 												<md-button href="#!/inventary/layouts/arrecife%203">
 													Arrecife 3
 												</md-button>
@@ -353,6 +363,12 @@
 												<md-menu-item>
 												<md-button href="#!/inventary/layouts/opalo%202">
 													Opalo 2 
+												</md-button>
+											</md-menu-item>
+											</md-menu-item>
+												<md-menu-item>
+												<md-button href="#!/inventary/layouts/jade%201">
+													Jade 1 
 												</md-button>
 											</md-menu-item>
 

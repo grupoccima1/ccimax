@@ -191,7 +191,7 @@
 					<div class="divider"></div>
 
 					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">{{arrecife.propertyData.discountPlan1}}% de descuento para propiedades con financiamiento hasta 180 Meses</h6>
+						<h6 class="deep-purple-text futura-light">{{arrecife.propertyData.discountPlan1}}% de descuento para propiedades con financiamiento</h6>
 						<h6 class="green-text futura-light">Precio de ${{arrecife.propertyData.totalPlan1}} MXN</h6>
 						<p class="promo__description grey-text">¡Oferta limitada!</p>
 					</div>
@@ -201,16 +201,16 @@
 					<div class="divider"></div>
 
 					<div class="p-20">
-						<h6 class="deep-purple-text futura-light">Compra en {{arrecife.month}} y paga la primera mensualidad hasta {{arrecife.nextMonth}}</h6>
+						<h6 class="deep-purple-text futura-light">Compra en Abril y paga la primera mensualidad hasta Junio</h6>
 						<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
-						<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en {{arrecife.month + ' ' + arrecife.year}}</p>
+						<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas en Abril 2024</p>
 					</div>
 					
 					<div class="divider"></div>
 
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 					
 					</a>
 				</div>
@@ -251,7 +251,7 @@
         <div class="container mt-64">
             <div class="row quote-header">
                 <div class="col s12">
-                    <h1 class="center-align">Arrecife 1</h1>
+                    <h1 class="center-align">Arrecife 2</h1>
                     <div class="quote-description">
                         <p class="left">Cotiza facilmente con un solo Click</p>
                         <img class="quote-icon-tap mt-15 ml-10 left" src="media/assets/img/icons/tap.svg">

@@ -79,12 +79,19 @@
                 Santa Rosa Business Park
             </div>
         </a>
+				<md-divider></md-divider>
+			<a href="#!/Navetec-Sur_57_Business_Park" ng-click="close()">
+            <div class="link-body link-nav">
+                Sur 57 Business Park Etapa 1
+            </div>
+        </a>
 		<md-divider></md-divider>
-		    <a href="#!/Navetec-Sur_57_Business_Park" ng-click="close()">
-                <div class="link-body link-nav">
-                    Sur 57 Business Park
-                </div>
-            </a>
+		<a href="#!/Navetec-Sur_57_E2_Business_Park" ng-click="close()">
+            <div class="link-body link-nav">
+                Sur 57 Business Park Etapa 2 
+            </div>
+        </a>
+		<md-divider></md-divider>
         <md-toolbar class="md-hue-2">
             <h1 class="md-toolbar-tools">NAVIGATION</h1>
         </md-toolbar>

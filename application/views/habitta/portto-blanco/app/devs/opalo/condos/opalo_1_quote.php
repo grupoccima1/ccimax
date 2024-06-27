@@ -72,7 +72,7 @@
 
 			<div class="nav-wrapper">
 
-				<a href="#!/portto_blanco" class="brand-logo white left"><img class="logo-pb" src="media/assets/img/habitta/portto-blanco/logos/logo.svg"></a>
+				<a href="#!/portto_blanco" class="brand-logo white left"><img class="logo-pb" src="media/assets/img/habitta/portto-blanco/logos/logo_bernal.svg"></a>
 
 				<ul class="nav-menu hide-on-med-and-down">
 					<li><a href="#!/portto_blanco">Inicio</a></li>
@@ -206,7 +206,7 @@
 
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 					</a>
 				</div>
 
@@ -247,7 +247,7 @@
 		<div class="container mt-64">
 			<div class="row quote-header">
 				<div class="col s12">
-					<h1 class="center-align">Manglar 1</h1>
+					<h1 class="center-align">Ópalo 1</h1>
 					<div class="quote-description">
 						<p class="left">Cotiza facilmente con un solo Click</p>
 						<img class="quote-icon-tap mt-15 ml-10 left" src="media/assets/img/icons/tap.svg">

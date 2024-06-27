@@ -33,13 +33,6 @@
             </div>
         </a>
         <md-divider></md-divider>
-        <a href="#!/Portto_Blanco-Lomas" ng-click="close()">
-            <div class="fs__16px futura-light darkgray__text px-16 py-9 ">
-                <span>Lomas Portto Blanco - Querétaro</span>
-            </div>
-        </a>
-        <md-divider></md-divider>
-        
         <div class="blue__bg p-12">
             <span class="fs__18px white__text futura-book">Nuevo Desarrollos</span>
         </div>
@@ -62,6 +55,22 @@
         <a href="#!/Portto_Blanco-Bernal/Malaquita" ng-click="close()">
             <div class="fs__16px futura-light darkgray__text px-16 py-9 ">
                 <span>Malaquita</span>
+            </div>
+        </a>
+        <md-divider></md-divider>
+        <a href="#!/Portto_Blanco-Bernal/Opalo_1" ng-click="close()">
+            <div class="fs__16px futura-light darkgray__text px-16 py-9 ">
+                <span>Ópalo 1</span>
+            </div>
+        </a>
+        <a href="#!/Portto_Blanco-Bernal/Opalo_2" ng-click="close()">
+            <div class="fs__16px futura-light darkgray__text px-16 py-9 ">
+                <span>Ópalo 2</span>
+            </div>
+        </a>
+        <a href="#!/Portto_Blanco-Bernal/Jade_1" ng-click="close()">
+            <div class="fs__16px futura-light darkgray__text px-16 py-9 ">
+                <span>Jade 1</span>
             </div>
         </a>
         <md-divider></md-divider>
@@ -95,10 +104,10 @@
                     <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/logo.svg">
                 </a>
                 <div class="p-40"></div>
-                <!-- <a href="#!/Portto_Blanco-Lomas">
-                    <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/lomas_pb_logo.svg">
-                </a>
-                <div class="p-40"></div> -->
+                <!--<a href="#!/Portto_Blanco-Lomas">-->
+                <!--    <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/lomas_pb_logo.svg">-->
+                <!--</a>-->
+                <div class="p-40"></div>
                 <a href="#!/Portto_Blanco-Bernal">
                     <img class="pb__logo" src="media/assets/img/habitta/portto-blanco/logos/logo_bernal.svg">
                 </a>

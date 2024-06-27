@@ -214,37 +214,6 @@
 						<a href="https://pay.billpocket.com/habitta" class="btn blue-bg no__shadow futura-bold">Apártar ahora</>
 					</a>
 				</div>
-
-				<!-- <div class="header-dialog pb-10">
-					<img class="logo-quote" src="media/assets/img/habitta/portto-blanco/logos/logo.svg">
-					<img class="logo-habitta-quote right mt-20 mr-20" src="media/assets/img/logos/logo-habitta.svg">
-				</div>
-
-				<div class="divider"></div>
-
-				<p>Condominio {{taiga.propertyData.condominium}}</p>
-				<p>Numero {{taiga.propertyData.number}}</p>
-				<p>Área de {{taiga.propertyData.area}} M&sup2;</p>
-				<p>Lote tipo {{taiga.propertyData.type}}</p>
-				<p>Precio por M&sup2; de ${{taiga.propertyData.cost_m2}} MN</p>
-				<p style="text-decoration: line-through;">Precio del Lote: ${{taiga.propertyData.total}} MN</p>
-
-				<div class="divider"></div>
-				<p class="center-align">Promociones de Lanzamiento Digital</p>
-				<div class="divider"></div>
-
-				<p>{{taiga.propertyData.discountPlan1}}% de descuento pagando de contado</p>
-
-				<p class="green-text">Precio de Lote: ${{taiga.propertyData.totalPlan1}} MN</p>
-
-				<p>{{taiga.propertyData.discountPlan2}}% de descuento pagando con Financiamiento a 180 Meses</p>
-
-				<p class="green-text">Precio de Lote: ${{taiga.propertyData.totalPlan2}} MN</p>
-
-				<p>Paga la primera Mensualidad hasta Septiembre pagando el 100% de Enganche</p>
-
-				<p class="mt-40"><a href="https://pay.billpocket.com/habitta">¡Apártalo con solo $10,000 MN! Comunícate con un Asesor con el botón de CONTACTO y realiza tu pago de forma Online dando click en el botón APÁRTAR AQUÍ o dando click a este texto, así de simple</a></p> -->
-
 			</div>
 
 			<div class="divider"></div>

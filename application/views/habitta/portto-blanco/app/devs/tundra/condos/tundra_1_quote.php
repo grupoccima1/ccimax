@@ -206,7 +206,7 @@
 
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 					</a>
 				</div>
 
@@ -269,8 +269,8 @@
         <div class="container">
 
         <svg version="1.1" id="CLUSTER__x2F__ETAPA__x2F__CONDO"
-        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 777"
-        style="enable-background:new 0 0 1366 777;" xml:space="preserve">
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 777"
+	 style="enable-background:new 0 0 1366 777;" xml:space="preserve">
             <style type="text/css">
                 .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#4077AF;}
                 .st1{fill:#FBBD0B;}
@@ -1247,7 +1247,7 @@
                     <line class="st23" x1="0" y1="772.3" x2="0" y2="0"/>
                 </g>
             </g>
-        </svg>
+            </svg>
         </div>
     </div>
 </body>

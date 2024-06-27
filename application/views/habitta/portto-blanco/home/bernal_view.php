@@ -116,6 +116,11 @@
                                         <span>Ópalo 2</span>
                                     </div>
                                 </a>
+                                <a href="#!/Portto_Blanco-Bernal/Jade_1" ng-click="close()">
+                                    <div class="link-sidenav">
+                                        <span>Jade 1</span>
+                                    </div>
+                                </a>
                                 <md-menu-divider></md-menu-divider>
                             </md-menu-content>
                         </md-menu>
@@ -164,6 +169,11 @@
                                     <span>Ópalo 2</span>
                                 </div>
                             </a>
+                             <a href="#!/Portto_Blanco-Bernal/Jade_1" ng-click="close()">
+                                    <div class="link-sidenav">
+                                        <span>Jade 1</span>
+                                    </div>
+                                </a>
                         </md-menu-content>
                     </md-menu>
                 </div>

@@ -210,7 +210,7 @@
 
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 					
 					</a>
 				</div>
@@ -905,7 +905,7 @@
 </g>
 <g id="CLUSTER">
 	<g id="ISLA_A">
-		<g id="A-01_2_" class="property__active" ng-class="arrecife.inmovablesClassList[0]" ng-click="arrecife.showPropertyData(61, '1')">
+		<g id="A-01_2_"  class="property__active" ng-class="arrecife.inmovablesClassList[0]" ng-click="arrecife.showPropertyData(61, '1')">
 			<polyline id="AL-01_2_" class="property pb-sprite-1" points="1135.3,1378.6 1071.4,1408.2 1018.8,1294.8 1082.7,1265.2 1135.3,1378.6 			"/>
 			<g>
 				<polyline class="st30" points="1063,1308 1056.1,1293 1067.1,1297 1063,1308 				"/>

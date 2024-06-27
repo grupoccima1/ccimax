@@ -83,6 +83,22 @@
                                 </md-option>
                             </md-select>
                         </md-input-container>
+                        
+                        <md-input-container>
+                            <label>
+                                <span class="gray-txt fs__13px proxima-soft-regular">
+                                    Nombre
+                                </span>
+                            </label>
+                            <!-- {{member.name.first + ' ' + member.name.last}} -->
+                            
+                            <md-select name="groupStatus" ng-model="users.group.filters.status.selected" ng-change="users.group.resetAndUpdate()">
+                                <md-option ng-repeat="status in users.group.filters.status.members" ng-value="$index">
+                                    <span class="dark__text fs__14px proxima-soft-regular">{{name}}</span>
+                                
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
 
                     </div>
                 </div>

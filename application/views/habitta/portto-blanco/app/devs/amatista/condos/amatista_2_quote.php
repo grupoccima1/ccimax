@@ -206,7 +206,7 @@
 					<div class="divider"></div>
 					<div class="p-20">
 						<h6 class="deep-purple-text futura-light">Compra en {{ amatista.month }} y paga la primera
-							mensualidad hasta Junio</h6>
+							mensualidad hasta Noviembre</h6>
 						<p class="promo__description grey-text">*Pagando el 100% de enganche</p>
 						<p class="promo__description grey-text">*Aplica para todas las operaciones a crédito realizadas
 							en {{ amatista.month + ' ' + amatista.year }}</p>
@@ -214,7 +214,7 @@
 					<div class="divider"></div>
 					<a class="p-20">
 						<p class="blue-text futura-book">¡Apártalo ahora!</p>
-						<p class="green-text">Con tan solo $5,000 MXN</p>
+						<p class="green-text">Con tan solo $10,000 MXN</p>
 					</a>
 				</div>
 
