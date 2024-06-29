@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="media/bower_components/materialize/js/materialize.min.js"></script>
 </head>
 
-<body ng-controller="NvtSurNuevoQuoteCtrl as nvtSurNuevo">
+<body ng-controller="nvtSurNuevoTresQuoteCtrl as nvtSurNuevoTres">
 	<!--Menu actualizado 19-DIC-2022 -->
 	<md-sidenav class="cc-sidenav md-sidenav-left md-whiteframe-4dp" md-component-id="left">
         <md-toolbar class="md-hue-2">
@@ -116,12 +116,12 @@
             </div>
         </nav>
     </div>
-	<div class="modal-dialog" ng-class="nvtSurNuevo.dialogDisplay">
-		<div class="backdrop-dialog" ng-click="nvtSurNuevo.closeDialog()"></div>
+	<div class="modal-dialog" ng-class="nvtSurNuevoTres.dialogDisplay">
+		<div class="backdrop-dialog" ng-click="nvtSurNuevoTres.closeDialog()"></div>
 		<div class="container-dialog p-20">
 			<div class="toolbar-dialog blue-txt">
 				Cotización
-				<span ng-click="nvtSurNuevo.closeDialog()">
+				<span ng-click="nvtSurNuevoTres.closeDialog()">
 					<img class="btn-close-dialog mt-4" src="media/assets/img/icons/close.svg">
 				</span>
 			</div>
@@ -132,23 +132,23 @@
 						<h6 class="futura-med">Navetec Business Park SUR 57 Etapa 3</h6>
 					</div>
 					<div class="p-5">
-						<h6 class="futura-light">{{nvtSurNuevo.propertyData.propertyClass}}</h6>
+						<h6 class="futura-light">{{nvtSurNuevoTres.propertyData.propertyClass}}</h6>
 					</div>
 					<div class="p-5">
-						<h6 class="futura-light">{{nvtSurNuevo.propertyData.type}}</h6>
+						<h6 class="futura-light">{{nvtSurNuevoTres.propertyData.type}}</h6>
 					</div>
 					<div class="p-5">
-						<h6 class="futura-light">Número {{nvtSurNuevo.propertyData.number}}</h6>
+						<h6 class="futura-light">Número {{nvtSurNuevoTres.propertyData.number}}</h6>
 					</div>
 					
 					<div class="p-5">
-						<h6 class="futura-light">Área de {{nvtSurNuevo.propertyData.area}} M&sup2;</h6>
+						<h6 class="futura-light">Área de {{nvtSurNuevoTres.propertyData.area}} M&sup2;</h6>
 					</div>
 					<div class="p-5">
-						<h6 class="futura-light">Precio por M&sup2; de ${{nvtSurNuevo.property.sample.m2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2}) }} MXN</h6>
+						<h6 class="futura-light">Precio por M&sup2; de ${{nvtSurNuevoTres.property.sample.m2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2}) }} MXN</h6>
 					</div>
 					<div class="p-5">
-						<h6 class="futura-light green-text">Precio de ${{nvtSurNuevo.property.sample.property.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2}) }} MXN <span style="color: #857C82; font-size: 12px;">{{ (nvtSurNuevo.propertyData.propertyClass !== 'Lote industrial') ? '+ I.V.A.' : '' }}</span></h6>
+						<h6 class="futura-light green-text">Precio de ${{nvtSurNuevoTres.property.sample.property.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2}) }} MXN <span style="color: #857C82; font-size: 12px;">{{ (nvtSurNuevoTres.propertyData.propertyClass !== 'Lote industrial') ? '+ I.V.A.' : '' }}</span></h6>
 					</div>
 					<div class="p-5">
 						<h6 class="futura-light blue-text">Pregunta por nuestras promociones del mes</h6>
@@ -435,7 +435,7 @@
       <text class="cls-26" transform="translate(60.7 117.4) rotate(-1.2) scale(1 1) skewX(.6)"><tspan x="0" y="0">ÁREA COMERCIAL</tspan></text>
       <text class="cls-10" transform="translate(75.7 133.4) rotate(.8) scale(1 1) skewX(.6)"><tspan x="0" y="0">716.88 m2</tspan></text>
     </g>
-    <g id="A-01" ng-class="nvtSurNuevo.inmovablesClassList[]" ng-click="nvtSurNuevo.showPropertyData(72, '', nvtSurNuevo.inmovables[].idProperty)">
+    <g id="A-01" ng-class="nvtSurNuevoTres.inmovablesClassList[0]" ng-click="nvtSurNuevoTres.showPropertyData(72, '1A', nvtSurNuevoTres.inmovables[0].idProperty)">
       <polyline id="AN-01" class="property nvt-sprite-1" points="198.9 150.4 205.7 211.1 29.3 230.7 22.2 167.2 199 147.5"/>
       <text class="cls-25" transform="translate(89.9 188.1) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 1A </tspan></text>
       <text class="cls-22" transform="translate(91.1 196.6) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -447,7 +447,7 @@
         <polyline class="cls-2" points="186.7 179.1 182.6 184.2 177.5 180.1 186.7 179.1"/>
       </g>
     </g>
-    <g id="A-02">
+    <g id="A-02" ng-class="nvtSurNuevoTres.inmovablesClassList[1]" ng-click="nvtSurNuevoTres.showPropertyData(72, '2A', nvtSurNuevoTres.inmovables[1].idProperty)">
       <polyline id="AN-02" class="property nvt-sprite-2" points="204.9 209.6 211.7 270.3 35.3 289.9 28.5 229.3 204.9 209.6"/>
       <text class="cls-25" transform="translate(100.1 253.5) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 2A </tspan></text>
       <text class="cls-22" transform="translate(101.3 262) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -455,7 +455,7 @@
       <text class="cls-19" transform="translate(200.7 235.4) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(110.5 235.4) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-03">
+    <g id="A-03" ng-class="nvtSurNuevoTres.inmovablesClassList[2]" ng-click="nvtSurNuevoTres.showPropertyData(72, '3A', nvtSurNuevoTres.inmovables[2].idProperty)">
       <polyline id="AN-03" class="property nvt-sprite-1" points="211.7 270.3 218.5 331 42.1 350.6 35.3 289.9 211.7 270.3"/>
       <text class="cls-25" transform="translate(104 311.8) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 3A </tspan></text>
       <text class="cls-22" transform="translate(105.2 320.3) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -463,7 +463,7 @@
       <text class="cls-19" transform="translate(204.7 293.7) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(114.4 293.7) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-04">
+    <g id="A-04" ng-class="nvtSurNuevoTres.inmovablesClassList[3]" ng-click="nvtSurNuevoTres.showPropertyData(72, '4A', nvtSurNuevoTres.inmovables[3].idProperty)">
       <polyline id="AN-04" class="property nvt-sprite-2" points="218.7 331 225.4 391.6 49 411.3 42.3 350.6 218.7 331"/>
       <text class="cls-25" transform="translate(112.4 370.1) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 4A </tspan></text>
       <text class="cls-22" transform="translate(113.6 378.6) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -471,7 +471,7 @@
       <text class="cls-19" transform="translate(213 352) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(122.8 352) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-05">
+    <g id="A-05" ng-class="nvtSurNuevoTres.inmovablesClassList[4]" ng-click="nvtSurNuevoTres.showPropertyData(72, '5A', nvtSurNuevoTres.inmovables[4].idProperty)">
       <polyline id="AN-05" class="property nvt-sprite-1" points="225.3 391.6 232 452.3 55.6 472 48.9 411.3 225.3 391.6"/>
       <text class="cls-25" transform="translate(118.9 433.3) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 5A </tspan></text>
       <text class="cls-22" transform="translate(120.1 441.8) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -479,7 +479,7 @@
       <text class="cls-19" transform="translate(219.5 415.2) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(129.3 415.2) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-06">
+    <g id="A-06" ng-class="nvtSurNuevoTres.inmovablesClassList[5]" ng-click="nvtSurNuevoTres.showPropertyData(72, '6A', nvtSurNuevoTres.inmovables[5].idProperty)">
       <polyline id="AN-06" class="property nvt-sprite-2" points="232 452.2 238.8 512.9 62.4 532.6 55.6 471.9 232 452.2"/>
       <text class="cls-25" transform="translate(127.6 495.3) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 6A </tspan></text>
       <text class="cls-22" transform="translate(128.8 503.8) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -487,7 +487,7 @@
       <text class="cls-19" transform="translate(228.2 477.2) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(138 477.2) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-07">
+    <g id="A-07" ng-class="nvtSurNuevoTres.inmovablesClassList[6]" ng-click="nvtSurNuevoTres.showPropertyData(72, '7A', nvtSurNuevoTres.inmovables[6].idProperty)">
       <polyline id="AN-07" class="property nvt-sprite-1" points="238.8 512.9 245.5 573.6 69.2 593.2 62.4 532.6 238.8 512.9"/>
       <text class="cls-25" transform="translate(131.3 555.7) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 7A </tspan></text>
       <text class="cls-22" transform="translate(132.5 564.3) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -495,7 +495,7 @@
       <text class="cls-19" transform="translate(231.9 537.7) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(141.7 537.7) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-08">
+    <g id="A-08" ng-class="nvtSurNuevoTres.inmovablesClassList[7]" ng-click="nvtSurNuevoTres.showPropertyData(72, '8A', nvtSurNuevoTres.inmovables[7].idProperty)">
       <polyline id="AN-08" class="property nvt-sprite-2" points="245.2 572.7 251.9 633.4 75.6 653 68.8 592.3 245.2 572.7"/>
       <text class="cls-25" transform="translate(138.9 612.8) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 8A </tspan></text>
       <text class="cls-22" transform="translate(140.1 621.3) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -503,7 +503,7 @@
       <text class="cls-19" transform="translate(239.6 594.7) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(149.3 594.7) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-09">
+    <g id="A-09" ng-class="nvtSurNuevoTres.inmovablesClassList[8]" ng-click="nvtSurNuevoTres.showPropertyData(72, '9A', nvtSurNuevoTres.inmovables[8].idProperty)">
       <polyline id="AN-09" class="property nvt-sprite-1" points="252.4 633.4 259.2 694 82.8 713.7 76 653 252.4 633.4"/>
       <text class="cls-25" transform="translate(146.3 673.5) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 9A </tspan></text>
       <text class="cls-22" transform="translate(147.5 682) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -511,7 +511,7 @@
       <text class="cls-19" transform="translate(246.9 655.4) rotate(83.7) skewX(0)"><tspan class="cls-38" x="0" y="0">14.0</tspan><tspan x="14.2" y="0">0</tspan></text>
       <text class="cls-21" transform="translate(156.7 655.4) rotate(-6.3) skewX(0)"><tspan class="cls-35" x="0" y="0">40.7</tspan><tspan x="14.2" y="0">0</tspan></text>
     </g>
-    <g id="A-10">
+    <g id="A-10" ng-class="nvtSurNuevoTres.inmovablesClassList[9]" ng-click="nvtSurNuevoTres.showPropertyData(72, '10A', nvtSurNuevoTres.inmovables[9].idProperty)">
       <polyline id="AN-10" class="property nvt-sprite-2" points="259.4 694.5 266.1 755.2 89.7 774.8 83 714.2 259.4 694.5"/>
       <text class="cls-25" transform="translate(152.2 734.6) rotate(-6.3) skewX(0)"><tspan x="0" y="0">NAVE 10A </tspan></text>
       <text class="cls-22" transform="translate(153.4 743.1) rotate(-6.3) skewX(0)"><tspan class="cls-33" x="0" y="0">56</tspan><tspan x="9.5" y="0">9.80 m2</tspan></text>
@@ -542,7 +542,7 @@
     </g>
   </g>
   <g id="MÓDULO_D" data-name="MÓDULO D">
-    <g id="D-01">
+    <g id="D-01" ng-class="nvtSurNuevoTres.inmovablesClassList[10]" ng-click="nvtSurNuevoTres.showPropertyData(72, '1D', nvtSurNuevoTres.inmovables[10].idProperty)">
       <polyline id="DN-01" class="property nvt-sprite-1" points="317.5 438 427.9 460.9 396.4 613 335.5 600.4 317.5 438"/>
       <text class="cls-24" transform="translate(363.6 540.9) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 1D</tspan></text>
       <text class="cls-13" transform="translate(372.6 545.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">707.18 m2</tspan></text>
@@ -554,7 +554,7 @@
         <polyline class="cls-2" points="370 472.3 377.4 467.1 377.4 467.2 375.3 479.5"/>
       </g>
     </g>
-    <g id="D-02">
+    <g id="D-02" ng-class="nvtSurNuevoTres.inmovablesClassList[11]" ng-click="nvtSurNuevoTres.showPropertyData(72, '2D', nvtSurNuevoTres.inmovables[11].idProperty)">
       <polyline id="DN-02" class="property nvt-sprite-2" points="396.4 613 427.9 460.9 488 473.3 456.5 625.4 396.4 613"/>
       <text class="cls-24" transform="translate(434.8 560.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 2D</tspan></text>
       <text class="cls-13" transform="translate(442.1 568.1) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -562,7 +562,7 @@
       <text class="cls-12" transform="translate(442.1 473.4) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(418 548) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-03">
+    <g id="D-03" ng-class="nvtSurNuevoTres.inmovablesClassList[12]" ng-click="nvtSurNuevoTres.showPropertyData(72, '3D', nvtSurNuevoTres.inmovables[12].idProperty)">
       <polyline id="DN-03" class="property nvt-sprite-1" points="488 473.3 548.1 485.7 516.6 637.9 456.5 625.4 488 473.3"/>
       <text class="cls-24" transform="translate(497.5 569) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 3D</tspan></text>
       <text class="cls-13" transform="translate(504.8 576.7) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -570,7 +570,7 @@
       <text class="cls-12" transform="translate(503.2 486.1) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(478.3 556.3) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-04">
+    <g id="D-04" ng-class="nvtSurNuevoTres.inmovablesClassList[13]" ng-click="nvtSurNuevoTres.showPropertyData(72, '4D', nvtSurNuevoTres.inmovables[13].idProperty)">
       <polyline id="DN-04" class="property nvt-sprite-2" points="516.6 637.9 548.1 485.7 608.1 498.2 576.7 650.3 516.6 637.9"/>
       <text class="cls-24" transform="translate(557.6 585.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 4D</tspan></text>
       <text class="cls-13" transform="translate(564.9 592.9) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -578,7 +578,7 @@
       <text class="cls-12" transform="translate(564.4 498.7) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(539.7 569) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-05">
+    <g id="D-05" ng-class="nvtSurNuevoTres.inmovablesClassList[14]" ng-click="nvtSurNuevoTres.showPropertyData(72, '5D', nvtSurNuevoTres.inmovables[14].idProperty)">
       <polyline id="DN-05" class="property nvt-sprite-1" points="608.1 498.2 668.2 510.6 636.7 662.7 576.7 650.3 608.1 498.2"/>
       <text class="cls-24" transform="translate(617.7 596.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 5D</tspan></text>
       <text class="cls-13" transform="translate(625 604.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -586,7 +586,7 @@
       <text class="cls-14" transform="translate(625.5 511.4) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(599.6 583.4) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-06">
+    <g id="D-06" ng-class="nvtSurNuevoTres.inmovablesClassList[15]" ng-click="nvtSurNuevoTres.showPropertyData(72, '6D', nvtSurNuevoTres.inmovables[15].idProperty)">
       <polyline id="DN-06" class="property nvt-sprite-2" points="636.7 662.7 668.2 510.6 728.3 523.1 696.8 675.2 636.7 662.7"/>
       <text class="cls-24" transform="translate(677.8 606.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 6D</tspan></text>
       <text class="cls-13" transform="translate(685.1 614) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -594,7 +594,7 @@
       <text class="cls-14" transform="translate(686.7 524.1) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(659.3 594.8) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-07">
+    <g id="D-07" ng-class="nvtSurNuevoTres.inmovablesClassList[16]" ng-click="nvtSurNuevoTres.showPropertyData(72, '7D', nvtSurNuevoTres.inmovables[16].idProperty)">
       <polyline id="DN-07" class="property nvt-sprite-1" points="727.4 523.1 787.5 535.5 756 687.6 695.9 675.2 727.4 523.1"/>
       <text class="cls-24" transform="translate(739.5 621.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 7D</tspan></text>
       <text class="cls-13" transform="translate(746.8 629.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -602,7 +602,7 @@
       <text class="cls-14" transform="translate(747.8 536.7) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(719 609.1) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-08">
+    <g id="D-08" ng-class="nvtSurNuevoTres.inmovablesClassList[17]" ng-click="nvtSurNuevoTres.showPropertyData(72, '8D', nvtSurNuevoTres.inmovables[17].idProperty)">
       <polyline id="DN-08" class="property nvt-sprite-2" points="758 687.6 789.5 535.5 849.6 547.9 818.1 700.1 758 687.6"/>
       <text class="cls-24" transform="translate(798.6 632.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 8D</tspan></text>
       <text class="cls-13" transform="translate(805.9 640.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -610,7 +610,7 @@
       <text class="cls-14" transform="translate(808.9 549.4) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(780.6 618.8) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-09">
+    <g id="D-09" ng-class="nvtSurNuevoTres.inmovablesClassList[18]" ng-click="nvtSurNuevoTres.showPropertyData(72, '9D', nvtSurNuevoTres.inmovables[18].idProperty)">
       <polyline id="DN-09" class="property nvt-sprite-1" points="848.6 547.3 908.7 559.8 877.2 711.9 817.1 699.4 848.6 547.3"/>
       <text class="cls-24" transform="translate(858.1 646.5) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 9D</tspan></text>
       <text class="cls-13" transform="translate(865.4 654.2) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -618,7 +618,7 @@
       <text class="cls-14" transform="translate(870.1 562) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(840.1 631.6) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-10">
+    <g id="D-10" ng-class="nvtSurNuevoTres.inmovablesClassList[19]" ng-click="nvtSurNuevoTres.showPropertyData(72, '10D', nvtSurNuevoTres.inmovables[19].idProperty)">
       <polyline id="DN-10" class="property nvt-sprite-2" points="877.3 711.5 909.5 559.2 969.6 571.7 938 724.4 878.1 712"/>
       <text class="cls-24" transform="translate(918.3 660.5) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 10D</tspan></text>
       <text class="cls-13" transform="translate(925.6 665.2) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -626,7 +626,7 @@
       <text class="cls-14" transform="translate(931.2 574.7) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(900 642.7) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-11">
+    <g id="D-11" ng-class="nvtSurNuevoTres.inmovablesClassList[20]" ng-click="nvtSurNuevoTres.showPropertyData(72, '11D', nvtSurNuevoTres.inmovables[20].idProperty)">
       <polyline id="DN-11" class="property nvt-sprite-1" points="968.7 571.8 1028.8 584.3 997.3 736.4 937.2 724 968.7 571.8"/>
       <text class="cls-24" transform="translate(977.7 671.9) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 11D</tspan></text>
       <text class="cls-13" transform="translate(986.6 677.1) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -634,7 +634,7 @@
       <text class="cls-14" transform="translate(992.4 587.3) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(961.8 654.1) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-12">
+    <g id="D-12" ng-class="nvtSurNuevoTres.inmovablesClassList[21]" ng-click="nvtSurNuevoTres.showPropertyData(72, '12D', nvtSurNuevoTres.inmovables[21].idProperty)">
       <polyline id="DN-12" class="property nvt-sprite-2" points="997.4 736.3 1028.9 584.2 1089 596.6 1057.5 748.7 997.4 736.3"/>
       <text class="cls-24" transform="translate(1036.4 683.8) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 12D</tspan></text>
       <text class="cls-13" transform="translate(1045.6 689.5) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -642,7 +642,7 @@
       <text class="cls-14" transform="translate(1053.5 600) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(1020.3 666.4) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-13">
+    <g id="D-13" ng-class="nvtSurNuevoTres.inmovablesClassList[22]" ng-click="nvtSurNuevoTres.showPropertyData(72, '13D', nvtSurNuevoTres.inmovables[22].idProperty)">
       <polyline id="DN-13" class="property nvt-sprite-1" points="1089.4 596.7 1149.5 609.2 1118 761.3 1057.9 748.8 1089.4 596.7"/>
       <text class="cls-24" transform="translate(1099.5 694.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 13D</tspan></text>
       <text class="cls-13" transform="translate(1106.8 698.1) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -650,7 +650,7 @@
       <text class="cls-14" transform="translate(1114.7 612.7) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(1081.6 677.1) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
     </g>
-    <g id="D-14">
+    <g id="D-14" ng-class="nvtSurNuevoTres.inmovablesClassList[23]" ng-click="nvtSurNuevoTres.showPropertyData(72, '14D', nvtSurNuevoTres.inmovables[23].idProperty)">
       <polyline id="DN-14" class="property nvt-sprite-2" points="1117.8 761.6 1149.3 609.5 1209.4 622 1177.9 774.1 1117.8 761.6"/>
       <text class="cls-24" transform="translate(1158.7 704.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 14D</tspan></text>
       <text class="cls-13" transform="translate(1166.9 709.7) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">496.21 m2</tspan></text>
@@ -658,7 +658,7 @@
       <text class="cls-9" transform="translate(1142.6 685.7) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">35.44</tspan></text>
       <text class="cls-14" transform="translate(1172.8 624) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
     </g>
-    <g id="D-15">
+    <g id="D-15" ng-class="nvtSurNuevoTres.inmovablesClassList[24]" ng-click="nvtSurNuevoTres.showPropertyData(72, '15D', nvtSurNuevoTres.inmovables[24].idProperty)">
       <polyline id="DN-15" class="property nvt-sprite-1" points="1209 622.6 1330.1 708.9 1310.8 802.2 1177.5 774.7 1209 622.6"/>
       <text class="cls-24" transform="translate(1245.6 743.2) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 15D</tspan></text>
       <text class="cls-13" transform="translate(1257.5 746.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">881.68 m2</tspan></text>
@@ -673,8 +673,8 @@
     </g>
   </g>
   <g id="MÓDULO_E" data-name="MÓDULO E">
-    <g id="E-01">
-      <polyline id="EN-01" class="property nvt-sprite-1" points="335.5 600.4 456.5 625.4 426.4 772.5 353 757.4 335.5 600.4"/>
+    <g id="E-01" ng-class="nvtSurNuevoTres.inmovablesClassList[25]" ng-click="nvtSurNuevoTres.showPropertyData(72, '1E', nvtSurNuevoTres.inmovables[23].idProperty)">
+      <polyline id="EN-01" class="property nvt-sprite-2" points="335.5 600.4 456.5 625.4 426.4 772.5 353 757.4 335.5 600.4"/>
       <text class="cls-24" transform="translate(392.7 694.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 1E</tspan></text>
       <text class="cls-13" transform="translate(400.7 699.8) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">779.42 m2</tspan></text>
       <text class="cls-16" transform="translate(382.7 619.6) rotate(11.7) scale(1 1)"><tspan x="0" y="0">28.18</tspan></text>
@@ -685,7 +685,7 @@
         <polyline class="cls-2" points="385.4 739.7 392.7 734.6 392.7 734.6 390.7 746.9"/>
       </g>
     </g>
-    <g id="E-02">
+    <g id="E-02" ng-class="nvtSurNuevoTres.inmovablesClassList[26]" ng-click="nvtSurNuevoTres.showPropertyData(72, '2E', nvtSurNuevoTres.inmovables[24].idProperty)">
       <polyline id="EN-02" class="property nvt-sprite-2" points="457.2 624.1 517.2 636.5 486.5 785 426.4 772.5 457.2 624.1"/>
       <text class="cls-24" transform="translate(467.5 714.5) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 2E</tspan></text>
       <text class="cls-13" transform="translate(474.8 722.1) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -693,7 +693,7 @@
       <text class="cls-15" transform="translate(444.2 772) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(448.8 704.3) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-03">
+    <g id="E-03" ng-class="nvtSurNuevoTres.inmovablesClassList[27]" ngclick="nvtSurNuevoTres.showPropertyData(72, '3E', nvtSurNuevoTres.inmovables[25].idProperty)">
       <polyline id="EN-03" class="property nvt-sprite-1" points="517.6 636.7 577.7 649.1 547 797.5 486.9 785.1 517.6 636.7"/>
       <text class="cls-24" transform="translate(529.2 726.9) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 3E</tspan></text>
       <text class="cls-13" transform="translate(536.5 734.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -701,7 +701,7 @@
       <text class="cls-9" transform="translate(505.6 784.7) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(510.3 717) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-04">
+    <g id="E-04" ng-class="nvtSurNuevoTres.inmovablesClassList[28]" ng-click="nvtSurNuevoTres.showPropertyData(72, '4E', nvtSurNuevoTres.inmovables[26].idProperty)">
       <polyline id="EN-04" class="property nvt-sprite-2" points="577.3 649 637.4 661.4 606.7 809.8 546.6 797.4 577.3 649"/>
       <text class="cls-24" transform="translate(585.8 739.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 4E</tspan></text>
       <text class="cls-13" transform="translate(593.1 747) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -709,7 +709,7 @@
       <text class="cls-15" transform="translate(567.1 797.4) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(570.7 730.6) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-05">
+    <g id="E-05" ng-class="nvtSurNuevoTres.inmovablesClassList[29]" ng-click="nvtSurNuevoTres.showPropertyData(72, 5E', nvtSurNuevoTres.inmovables[27].idProperty)">
       <polyline id="EN-05" class="property nvt-sprite-1" points="636.9 661.5 697 674 666.3 822.4 606.2 809.9 636.9 661.5"/>
       <text class="cls-24" transform="translate(649.3 755.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 5E</tspan></text>
       <text class="cls-13" transform="translate(656.6 763.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -717,7 +717,7 @@
       <text class="cls-15" transform="translate(628.6 810.2) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(632.2 743.3) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-06">
+    <g id="E-06" ng-class="nvtSurNuevoTres.inmovablesClassList[30]" ng-click="nvtSurNuevoTres.showPropertyData(72, '6E', nvtSurNuevoTres.inmovables[28].idProperty)">
       <polyline id="EN-06" class="property nvt-sprite-2" points="696.8 673.8 756.9 686.2 726.2 834.6 666.1 822.2 696.8 673.8"/>
       <text class="cls-24" transform="translate(707.8 769) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 6E</tspan></text>
       <text class="cls-13" transform="translate(715.1 776.7) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -725,7 +725,7 @@
       <text class="cls-15" transform="translate(690.1 822.9) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(689 754.9) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-07">
+    <g id="E-07" ng-class="nvtSurNuevoTres.inmovablesClassList[31]" ng-click="nvtSurNuevoTres.showPropertyData(72, '7E', nvtSurNuevoTres.inmovables[29].idProperty)">
       <polyline id="EN-07" class="property nvt-sprite-1" points="756.9 686.4 817 698.8 786.3 847.3 726.2 834.8 756.9 686.4"/>
       <text class="cls-24" transform="translate(770.8 782.5) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 7E</tspan></text>
       <text class="cls-13" transform="translate(778.1 790.1) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -733,7 +733,7 @@
       <text class="cls-15" transform="translate(745 834.5) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(750.5 767.7) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-08">
+    <g id="E-08" ng-class="nvtSurNuevoTres.inmovablesClassList[32]" ng-click="nvtSurNuevoTres.showPropertyData(72, '8E', nvtSurNuevoTres.inmovables[30].idProperty)">
       <polyline id="EN-08" class="property nvt-sprite-2" points="817.7 699.1 877.8 711.6 847.6 859.2 787 847.5 817.7 699.1"/>
       <text class="cls-24" transform="translate(824 789.1) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 8E</tspan></text>
       <text class="cls-13" transform="translate(831.3 796.8) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -741,7 +741,7 @@
       <text class="cls-15" transform="translate(813 848.3) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(812 780.4) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-09">
+    <g id="E-09" ng-class="nvtSurNuevoTres.inmovablesClassList[33]" ng-click="nvtSurNuevoTres.showPropertyData(72, '9E', nvtSurNuevoTres.inmovables[31].idProperty)">
       <polyline id="EN-09" class="property nvt-sprite-1" points="877.5 711.9 937.2 724.8 907.1 871.5 847 859.1 877.8 710.7"/>
       <text class="cls-24" transform="translate(888.1 805.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 9E</tspan></text>
       <text class="cls-13" transform="translate(895.5 810.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -749,7 +749,7 @@
       <text class="cls-15" transform="translate(866 858.1) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(871.1 793.1) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-10">
+    <g id="E-10" ng-class="nvtSurNuevoTres.inmovablesClassList[34]" ng-click="nvtSurNuevoTres.showPropertyData(72, '10E', nvtSurNuevoTres.inmovables[32].idProperty)">
       <polyline id="EN-10" class="property nvt-sprite-2" points="937.2 723.2 997.1 735.7 966.5 883.4 906.5 870.9 937.2 722.5"/>
       <text class="cls-24" transform="translate(944.4 816.2) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 10E</tspan></text>
       <text class="cls-13" transform="translate(953.3 820.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -757,7 +757,7 @@
       <text class="cls-15" transform="translate(927.8 871) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-15" transform="translate(932.6 805.8) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-11">
+    <g id="E-11" ng-class="nvtSurNuevoTres.inmovablesClassList[35]" ng-click="nvtSurNuevoTres.showPropertyData(72, '11E', nvtSurNuevoTres.inmovables[33].idProperty)">
       <polyline id="EN-11" class="property nvt-sprite-1" points="998 735.7 1058.1 748.2 1027.4 896.6 967.3 884.2 998 735.7"/>
       <text class="cls-24" transform="translate(1008.3 830.3) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 11E</tspan></text>
       <text class="cls-13" transform="translate(1015.6 835.2) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -765,7 +765,7 @@
       <text class="cls-15" transform="translate(987.7 884.2) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(991.6 818.6) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-12">
+    <g id="E-12" ng-class="nvtSurNuevoTres.inmovablesClassList[36]" ng-click="nvtSurNuevoTres.showPropertyData(72, '12E', nvtSurNuevoTres.inmovables[34].idProperty)">
       <polyline id="EN-12" class="property nvt-sprite-2" points="1058.9 746.6 1119.3 759.1 1088.4 908.3 1028 895.8 1058.9 746.6"/>
       <text class="cls-24" transform="translate(1069.2 843.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 12E</tspan></text>
       <text class="cls-13" transform="translate(1078.2 846.8) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -773,7 +773,7 @@
       <text class="cls-15" transform="translate(1050.4 897) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(1052.3 829.5) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-13">
+    <g id="E-13" ng-class="nvtSurNuevoTres.inmovablesClassList[37]" ng-click="nvtSurNuevoTres.showPropertyData(72, '13E', nvtSurNuevoTres.inmovables[35].idProperty)">
       <polyline id="EN-13" class="property nvt-sprite-1" points="1119.5 759.8 1179.6 772.2 1148.8 920.6 1088.8 908.2 1119.5 759.8"/>
       <text class="cls-24" transform="translate(1126.8 855.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 13E</tspan></text>
       <text class="cls-13" transform="translate(1134.1 860) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">484.12 m2</tspan></text>
@@ -781,7 +781,7 @@
       <text class="cls-15" transform="translate(1109.1 908.2) rotate(11.7) scale(1 1)"><tspan x="0" y="0">14.00</tspan></text>
       <text class="cls-9" transform="translate(1113.2 843) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
     </g>
-    <g id="E-14">
+    <g id="E-14" ng-class="nvtSurNuevoTres.inmovablesClassList[38]" ng-click="nvtSurNuevoTres.showPropertyData(72, '14E', nvtSurNuevoTres.inmovables[36].idProperty)">
       <polyline id="EN-14" class="property nvt-sprite-2" points="1179.3 772.2 1245.3 785.9 1214.6 934.3 1148.6 920.7 1179.3 772.2"/>
       <text class="cls-24" transform="translate(1189.6 869.6) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 14E</tspan></text>
       <text class="cls-13" transform="translate(1198.4 875.2) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">531.96 m2</tspan></text>
@@ -789,7 +789,7 @@
       <text class="cls-9" transform="translate(1171.9 855.5) rotate(-78.3) scale(1 1)"><tspan x="0" y="0">34.58</tspan></text>
       <text class="cls-17" transform="translate(1198.4 788.4) rotate(11.7) scale(1 1)"><tspan x="0" y="0">15.38</tspan></text>
     </g>
-    <g id="E-15">
+    <g id="E-15" ng-class="nvtSurNuevoTres.inmovablesClassList[39]" ng-click="nvtSurNuevoTres.showPropertyData(72, '15E', nvtSurNuevoTres.inmovables[37].idProperty)">
       <polyline id="EN-15" class="property nvt-sprite-1" points="1213.5 933.5 1243.8 787.1 1311.1 802.1 1280.9 947.5 1213.3 934.4"/>
       <text class="cls-24" transform="translate(1257.5 882) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">NAVE 15E</tspan></text>
       <text class="cls-13" transform="translate(1265.4 886.4) rotate(-78) scale(1 1) skewX(.6)"><tspan x="0" y="0">531.96 m2</tspan></text>

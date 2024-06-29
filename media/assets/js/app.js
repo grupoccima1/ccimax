@@ -1097,8 +1097,8 @@ app.config(function($routeProvider) {
 	})
 	.when('/Navetec-Sur_57_E3_Business_Park', {
 		templateUrl: 'application/views/navetec/quote/sur_57_iii_quote_view.php',
-		controller: 'NvtSurNuevoQuoteCtrl',
-		controllerAs: 'nvtSurNuevo'
+		controller: 'NvtSurNuevoTresQuoteCtrl',
+		controllerAs: 'nvtSurNuevoTres'
 	})
 	/***** Conekta *****/
 
@@ -9428,6 +9428,116 @@ app.controller('NvtSurNuevoQuoteCtrl', function($scope, Inmovables, Developments
 			nvtSurNuevo.inmovables = response.inmovables;
 			console.log(response.inmovables)
 			nvtSurNuevo.inmovablesClassList = inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+
+		});
+	}
+	init();
+
+});
+app.controller('NvtSurNuevoTresQuoteCtrl', function($scope, Inmovables, Developments, Status) {
+
+	var nvtSurNuevoTres = this;
+	var inmovables = Inmovables;
+	
+	var inmovablesData = [];
+	nvtSurNuevoTres.inmovablesClassList = [];
+	nvtSurNuevoTres.propertyData = [];
+
+	nvtSurNuevoTres.dialogDisplay = 'hide';
+
+	var discountPlan1 = .25;
+	var discountPlan2 = .20;
+
+	nvtSurNuevoTres.showPropertyData = function(idCondominium, number, idProperty) {
+		
+		Developments.selectPropertyById(idProperty).then(function(response) {
+
+			if (Status.checkHttpStatusCode(response.status)) {
+
+				nvtSurNuevoTres.property = response.property;
+				nvtSurNuevoTres.property.sample = {};
+
+				nvtSurNuevoTres.property.sample.m2 = (nvtSurNuevoTres.property.cost.increase.m2 > 0) ? nvtSurNuevoTres.property.cost.increase.m2 : nvtSurNuevoTres.property.cost.m2;
+				nvtSurNuevoTres.property.sample.property = nvtSurNuevoTres.property.sample.m2 * nvtSurNuevoTres.property.area;
+
+				nvtSurNuevoTres.property.sample.discount1 = nvtSurNuevoTres.property.sample.property - (nvtSurNuevoTres.property.sample.property * discountPlan1);
+				nvtSurNuevoTres.property.sample.discount2 = nvtSurNuevoTres.property.sample.property - (nvtSurNuevoTres.property.sample.property * discountPlan2);
+
+				angular.forEach(inmovablesData.inmovables, function(row, key) {
+					if (row.number == number && row.idCondominium == idCondominium) {
+						nvtSurNuevoTres.propertyData.condominium = inmovablesData.condos[0].condominium;
+						if (row.property_class == 1) {
+							nvtSurNuevoTres.propertyData.propertyClass = 'Nave industrial';
+							nvtSurNuevoTres.costToBlock = '$30,000 MXN';
+						} else if (row.property_class == 2) {
+							nvtSurNuevoTres.propertyData.propertyClass = 'Lote industrial';
+							nvtSurNuevoTres.costToBlock = '$10,000 MXN';
+						} else {
+							nvtSurNuevoTres.propertyData.propertyClass = 'Local Comercial';
+							nvtSurNuevoTres.costToBlock = '$10,000 MXN';
+						}
+		
+						for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+		
+							if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+		
+								nvtSurNuevoTres.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+								nvtSurNuevoTres.propertyData.cost_m2 = Number.parseFloat(inmovablesData.propertyTypes[indexType].cost_m2.toFixed(2));
+		
+								break;
+		
+							}
+		
+						}
+		
+						if (row.cost_m2_increase != null) {
+							nvtSurNuevoTres.propertyData.cost_m2 = nvtSurNuevoTres.property.cost.increase.m2;
+							nvtSurNuevoTres.propertyData.cost_m2 = Number.parseFloat(nvtSurNuevoTres.propertyData.cost_m2.toFixed(2));
+						}
+		
+						nvtSurNuevoTres.propertyData.number = row.number;
+						nvtSurNuevoTres.propertyData.area = row.area;
+						var total = nvtSurNuevoTres.propertyData.cost_m2 * nvtSurNuevoTres.propertyData.area;
+						nvtSurNuevoTres.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						var totalDiscountPlan1 = total - (total * discountPlan1);
+						nvtSurNuevoTres.propertyData.discountPlan1 = discountPlan1 * 100;
+						nvtSurNuevoTres.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						var totalDiscountPlan2 = total - (total * discountPlan2);
+						nvtSurNuevoTres.propertyData.discountPlan2 = discountPlan2 * 100;
+						nvtSurNuevoTres.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						nvtSurNuevoTres.openDialog();
+					}
+				});
+
+			} else {
+
+				alert('No se encontro información sobre esta propiedad');
+
+			}
+
+		}, function(response) {
+
+			alert('Revisa tu conexión a internet o contacta a un administrador');
+
+		});
+	}
+
+	nvtSurNuevoTres.openDialog = function() {
+		nvtSurNuevoTres.dialogDisplay = '';
+	}
+
+	nvtSurNuevoTres.closeDialog = function() {
+		nvtSurNuevoTres.dialogDisplay = 'hide';
+	}
+
+	var init = function() {
+
+		Inmovables.getInmovablesData(33, 18).then(function(response) {
+
+			inmovablesData = response;
+			nvtSurNuevoTres.inmovables = response.inmovables;
+			console.log(response.inmovables)
+			nvtSurNuevoTres.inmovablesClassList = inmovables.generateInmovablesClassList(inmovablesData.inmovables);
 
 		});
 	}
