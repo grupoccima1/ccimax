@@ -1093,7 +1093,7 @@ app.config(function($routeProvider) {
 	.when('/Navetec-Sur_57_E2_Business_Park', {
 		templateUrl: 'application/views/navetec/quote/sur_57_ii_quote_view.php',
 		controller: 'NvtSurNuevoQuoteCtrl',
-		controllerAs: 'nvtSurNuevo'
+		controllerAs: 'nvtSurNuevo' 
 	})
 	.when('/Navetec-Sur_57_E3_Business_Park', {
 		templateUrl: 'application/views/navetec/quote/sur_57_iii_quote_view.php',
@@ -9532,7 +9532,7 @@ app.controller('NvtSurNuevoTresQuoteCtrl', function($scope, Inmovables, Developm
 
 	var init = function() {
 
-		Inmovables.getInmovablesData(33, 18).then(function(response) {
+		Inmovables.getInmovablesData(18, 33).then(function(response) {
 
 			inmovablesData = response;
 			nvtSurNuevoTres.inmovables = response.inmovables;

@@ -239,6 +239,11 @@
 													Sur 57 etapa 2
 												</md-button>
 											</md-menu-item>
+											<md-menu-item>
+												<md-button href="#!/inventary/layouts/Sur%20Etapa%203">
+													Sur 57 etapa 3
+												</md-button>
+											</md-menu-item>
 											
 
 											<md-menu-divider></md-menu-divider>

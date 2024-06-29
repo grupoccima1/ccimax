@@ -204,7 +204,7 @@
 		<div class="container mt-64">
 			<div class="row quote-header">
 				<div class="col s12">
-					<h2 class="center-align futura-med">SUR 57 ETAPA 2 </h2>
+					<h2 class="center-align futura-med">SUR 57 ETAPA 3 </h2>
 					<div class="quote-description">
 						<p class="left">Cotiza facilmente con un solo Click</p>
 						<img class="quote-icon-tap mt-15 ml-10 left" src="media/assets/img/icons/tap.svg">
