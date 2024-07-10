@@ -94,16 +94,19 @@ app.config(function($routeProvider) {
 	/********** Home **********/
 
 	.when('/', {
-		templateUrl: 'application/views/home/home_view.php',
+		templateUrl: 'application/views/home/home_view.php'
 	})
+	
 	.when('/terminos_condiciones', {
 		templateUrl: 'application/views/home/terminos_view.php',
 	})
 
+	
 	.when('/politicas_de_privacidad', {
-		templateUrl: 'application/views/home/politicas_privacidad.php',
+		templateUrl: 'application/views/home/politicas_privacidad.php'
 	})
 	
+
 	/********** Application **********/
 
 	.when('/login', {
@@ -170,6 +173,8 @@ app.config(function($routeProvider) {
 		controllerAs: 'dashboard'
 	})
 	
+
+
 	/***** Users *****/
 
 	.when('/users', {
@@ -188,6 +193,7 @@ app.config(function($routeProvider) {
 		controllerAs: 'dashboard'
 	})
 
+    
 	
 	/***** Developments *****/
 
@@ -425,7 +431,6 @@ app.config(function($routeProvider) {
 		controller: 'PBParamoCtrl',
 		controllerAs: 'paramo'
 	})
-	
 	.when('/Portto_Blanco-Paramo_3-Inventario', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/paramo/condos/paramo_3_inventary.php',
 		controller: 'PBParamoCtrl',
@@ -559,14 +564,23 @@ app.config(function($routeProvider) {
 
 
 	/*****Arrecife*****/
+	.when('/Portto_Blanco-Arrecife_1', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_1_quote.php',
+		controller: 'PBArrecifeQuoteCtrl',
+		controllerAs: 'arrecife'
+	})
+	.when('/Portto_Blanco-Arrecife_2', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_2_quote.php',
+		controller: 'PBArrecifeQuoteCtrl',
+		controllerAs: 'arrecife'
+	})
 	.when('/Portto_Blanco-Arrecife_3', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/arrecife/condos/arrecife_3_quote.php',
 		controller: 'PBArrecifeQuoteCtrl',
 		controllerAs: 'arrecife'
 	})
 
-	
-	/*****Tundra*****/
+    /*****Tundra*****/
 	.when('/Portto_Blanco-Tundra', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/tundra/tundra_quote.php',
 		controller: 'PBTundraQuoteCtrl',
@@ -577,7 +591,6 @@ app.config(function($routeProvider) {
 		controller: 'PBTundraQuoteCtrl',
 		controllerAs: 'tundra'
 	})
-
 
 
     /***** LOMAS*****/
@@ -708,7 +721,8 @@ app.config(function($routeProvider) {
 		controller: 'PBBMalaquitaQuoteCtrl',
 		controllerAs: 'malaquita'
 	})
-/***** Opalo *****/
+
+    /***** Opalo *****/
 	.when('/Portto_Blanco-Bernal/Opalo', {
 		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/opalo_quote.php',
 		controller: 'PBBOpaloQuoteCtrl',
@@ -724,11 +738,25 @@ app.config(function($routeProvider) {
 		controller: 'PBBOpaloQuoteCtrl',
 		controllerAs: 'opalo'
 	})
-	.when('/Portto_Blanco-Bernal/Opalo_3', {
-		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_3_quote.php',
+    .when('/Portto_Blanco-Bernal/Opalo_3', {
+		templateUrl: 'application/views/habitta/portto-blanco/app/devs/opalo/condos/opalo_Falso_quote.php',
 		controller: 'PBBOpaloQuoteCtrl',
 		controllerAs: 'opalo'
 	})
+	
+    	/***** Jade *****/
+    .when('/Portto_Blanco-Bernal/Jade', {
+    	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/jade_quote.php',
+    	controller: 'PBBJadeQuoteCtrl',
+    	controllerAs: 'jade'
+    })
+    .when('/Portto_Blanco-Bernal/Jade_1', {
+    	templateUrl: 'application/views/habitta/portto-blanco/app/devs/jade/condos/jade_1_quote.php',
+    	controller: 'PBBJadeQuoteCtrl',
+    	controllerAs: 'jade'
+    })
+
+
 
 	/********** Veredas de Lira **********/
 	
@@ -747,45 +775,14 @@ app.config(function($routeProvider) {
 
 	/***** Application *****/
 
-	.when('/veredas_lira-master_plan', {
-		templateUrl: 'application/views/app/quote/habitta/veredas_lira/veredas_lira_view.php'
-	})
-
 	/*** Cedro ***/
 
 	/* Quote */
 
-	.when('/veredas_lira-cedro', {
-		templateUrl: 'application/views/app/quote/habitta/veredas_lira/etapa_1/cedro_view.php',
-		controller: 'VLCedroQuoteCtrl',
-		controllerAs: 'vlCedro'
-	})
+
 
 	/* Inventary */
 
-	.when('/Veredas_Lira-Cedro-Inventario', {
-		templateUrl: 'application/views/app/dashboard/habitta/veredas_lira/cedro_inventary_view.php',
-		controller: 'VLCedroCtrl',
-		controllerAs: 'cedro'
-	})
-
-	/*** Sabino ***/
-
-	/* Quote */
-
-	.when('/veredas_lira-sabino', {
-		templateUrl: 'application/views/app/quote/habitta/veredas_lira/etapa_1/sabino_view.php',
-		controller: 'VLSabinoQuoteCtrl',
-		controllerAs: 'vlSabino'
-	})
-
-	/* Inventary */
-
-	.when('/Veredas_Lira-Sabino-Inventario', {
-		templateUrl: 'application/views/app/dashboard/habitta/veredas_lira/sabino_inventary_view.php',
-		controller: 'VLSabinoCtrl',
-		controllerAs: 'sabino'
-	})
 
 	/******************** 
 	 * Navetec 
@@ -945,6 +942,14 @@ app.config(function($routeProvider) {
 		controller: 'NvtCeltaCtrl',
 		controllerAs: 'nvtCelta'
 	})
+	/***** CALAMANDA*****/
+	/* Inventary */
+
+	.when('/Navetec-Calamanda_Business_Park-Inventary', {
+		templateUrl: 'application/views/navetec/inventary/celta_inventary_view.php',
+		controller: 'NvtCeltaCtrl',
+		controllerAs: 'nvtCelta'
+	})
 
 	/* Quote */
 
@@ -963,6 +968,23 @@ app.config(function($routeProvider) {
 		controller: 'NvtCalamandaQuoteCtrl',
 		controllerAs: 'nvtCalamanda'
 	})
+	/* Quote Calamanda 2*/
+
+	.when('/Navetec-Calamanda_Business_Park_2', {
+		templateUrl: 'application/views/navetec/quote/calamanda_quote_view_ii.php',
+		controller: 'NvtCalamandaDosQuoteCtrl',
+		controllerAs: 'nvtCalamanda'
+	})
+	/* .when('/Navetec-Calamanda_ModuloA_Business_Park_2', {
+		templateUrl: 'application/views/navetec/quote/calamanda_moduloa_quote_view.php',
+		controller: 'NvtCalamandaQuoteCtrl',
+		controllerAs: 'nvtCalamanda'
+	})
+	.when('/Navetec-Calamanda_ModuloB_Business_Park_2', {
+		templateUrl: 'application/views/navetec/quote/calamanda_modulob_quote_view.php',
+		controller: 'NvtCalamandaQuoteCtrl',
+		controllerAs: 'nvtCalamanda'
+	}) */
 
 	
 	/***** La Presa *****/
@@ -1065,7 +1087,7 @@ app.config(function($routeProvider) {
 
 	/* Quote */
 
-	.when('/Navetec-Sur_57_Business_Park_false', {
+	.when('/Navetec-Sur_57_Business_Park_False', {
 		templateUrl: 'application/views/navetec/quote/sur_57_quote_view.php',
 		controller: 'NvtSurQuoteCtrl',
 		controllerAs: 'nvtSur'
@@ -1081,7 +1103,6 @@ app.config(function($routeProvider) {
 		controller: 'NvtSurNuevoQuoteCtrl',
 		controllerAs: 'nvtSurNuevo'
 	})
-
 	/***** Conekta *****/
 
 	/* Payment */
@@ -1929,6 +1950,18 @@ app.controller('UsersCtrl', function($scope, $rootScope, $http, $location, Sessi
 	// 	});
 	// }
 
+	$scope.filterMembers = function(member) {
+		if (!$scope.searchText) {
+			return true; // Si no hay texto de búsqueda, mostrar todos los miembros
+		}
+	
+		var searchText = $scope.searchText.toLowerCase();
+		var fullName = (member.name.first + ' ' + member.name.last).toLowerCase();
+	
+		// Verificar si el texto de búsqueda está contenido en el nombre completo del miembro
+		return fullName.indexOf(searchText) !== -1;
+	};
+
 	users.insertInmovablesToZohoNow = function() {
 		$http({
 			method: 'POST',
@@ -1947,8 +1980,8 @@ app.controller('UsersCtrl', function($scope, $rootScope, $http, $location, Sessi
 			config: {
 				current: 1,
 				limit: {
-					members: [25, 50, 100, 250, 500],
-					selected: 25
+					members: [10, 20, 30, 40, 50],
+					selected: 10
 				}
 			},
 			data: {
@@ -1959,13 +1992,17 @@ app.controller('UsersCtrl', function($scope, $rootScope, $http, $location, Sessi
 			}
 		},
 		filters: {
-			profiles: {
+			profile: {
 				members: ['Director', 'Gerente', 'Asesor'],
 				selected: 'Gerente'
 			},
 			status: {
 				members: ['Inactivo', 'Activo'],
 				selected: 1
+			},
+			name: {
+				members: ['Hombre', 'Mujer', 'Quimera'],
+				selected: 'Quimera'
 			}
 		},
 		options: {
@@ -4167,7 +4204,7 @@ app.controller('LayoutCtrl', function($routeParams, $location, $http, Session, S
 		inmovables: null
 	};
 
-	inventary.paginationLimits = [25, 50, 100, 250, 500];
+	inventary.paginationLimits = [25 , 50, 100, 250, 500];
 
 	let resetPagination = function() {
 		return {
@@ -8440,7 +8477,7 @@ app.controller('NvtAeropuertoQuoteCtrl', function($scope, Inmovables, Developmen
 							nvtAeropuerto.costToBlock = '$30,000 MXN';
 						} else if (row.property_class == 2) {
 							nvtAeropuerto.propertyData.propertyClass = 'Lote industrial';
-							nvtAeropuerto.costToBlock = '$10,000 MXN';
+							nvtAeropuerto.costToBlock = '$20,000 MXN';
 						} else {
 							nvtAeropuerto.propertyData.propertyClass = 'Lote habitacional';
 							nvtAeropuerto.costToBlock = '$10,000 MXN';
@@ -9079,6 +9116,117 @@ app.controller('NvtCalamandaQuoteCtrl', function($scope, Inmovables, Development
 	init();
 
 });
+/***** CALAMANDA  04 junio 2024*****/
+app.controller('NvtCalamandaDosQuoteCtrl', function($scope, Inmovables, Developments, Status) {
+
+	var nvtCalamanda = this;
+	var inmovables = Inmovables;
+	
+	var inmovablesData = [];
+	nvtCalamanda.inmovablesClassList = [];
+	nvtCalamanda.propertyData = [];
+
+	nvtCalamanda.dialogDisplay = 'hide';
+
+	var discountPlan1 = .25;
+	var discountPlan2 = .20;
+
+	nvtCalamanda.showPropertyData = function(idCondominium, number, idProperty) {
+		
+		Developments.selectPropertyById(idProperty).then(function(response) {
+
+			if (Status.checkHttpStatusCode(response.status)) {
+
+				nvtCalamanda.property = response.property;
+				nvtCalamanda.property.sample = {};
+
+				nvtCalamanda.property.sample.m2 = (nvtCalamanda.property.cost.increase.m2 > 0) ? nvtCalamanda.property.cost.increase.m2 : nvtCalamanda.property.cost.m2;
+				nvtCalamanda.property.sample.property = nvtCalamanda.property.sample.m2 * nvtCalamanda.property.area;
+
+				nvtCalamanda.property.sample.discount1 = nvtCalamanda.property.sample.property - (nvtCalamanda.property.sample.property * discountPlan1);
+				nvtCalamanda.property.sample.discount2 = nvtCalamanda.property.sample.property - (nvtCalamanda.property.sample.property * discountPlan2);
+
+				angular.forEach(inmovablesData.inmovables, function(row, key) {
+					if (row.number == number && row.idCondominium == idCondominium) {
+						nvtCalamanda.propertyData.condominium = inmovablesData.condos[0].condominium;
+						if (row.property_class == 1) {
+							nvtCalamanda.propertyData.propertyClass = 'Nave industrial';
+							nvtCalamanda.costToBlock = '$20,000 MXN';
+						} else if (row.property_class == 2) {
+							nvtCalamanda.propertyData.propertyClass = 'Lote industrial';
+							nvtCalamanda.costToBlock = '$10,000 MXN';
+						} else {
+							nvtCalamanda.propertyData.propertyClass = 'Local Comercial';
+							nvtCalamanda.costToBlock = '$10,000 MXN';
+						}
+		
+						for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+		
+							if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+		
+								nvtCalamanda.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+								nvtCalamanda.propertyData.cost_m2 = Number.parseFloat(inmovablesData.propertyTypes[indexType].cost_m2.toFixed(2));
+		
+								break;
+		
+							}
+		
+						}
+		
+						if (row.cost_m2_increase != null) {
+							nvtCalamanda.propertyData.cost_m2 = nvtCalamanda.property.cost.increase.m2;
+							nvtCalamanda.propertyData.cost_m2 = Number.parseFloat(nvtCalamanda.propertyData.cost_m2.toFixed(2));
+						}
+		
+						nvtCalamanda.propertyData.number = row.number;
+						nvtCalamanda.propertyData.area = row.area;
+						var total = nvtCalamanda.propertyData.cost_m2 * nvtCalamanda.propertyData.area;
+						nvtCalamanda.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						var totalDiscountPlan1 = total - (total * discountPlan1);
+						nvtCalamanda.propertyData.discountPlan1 = discountPlan1 * 100;
+						nvtCalamanda.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						var totalDiscountPlan2 = total - (total * discountPlan2);
+						nvtCalamanda.propertyData.discountPlan2 = discountPlan2 * 100;
+						nvtCalamanda.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+						nvtCalamanda.openDialog();
+					}
+				});
+
+			} else {
+
+				alert('No se encontro información sobre esta propiedad');
+
+			}
+
+		}, function(response) {
+
+			alert('Revisa tu conexión a internet o contacta a un administrador');
+
+		});
+	}
+
+	nvtCalamanda.openDialog = function() {
+		nvtCalamanda.dialogDisplay = '';
+	}
+
+	nvtCalamanda.closeDialog = function() {
+		nvtCalamanda.dialogDisplay = 'hide';
+	}
+
+	var init = function() {
+
+		Inmovables.getInmovablesData(17, 32).then(function(response) {
+
+			inmovablesData = response;
+			nvtCalamanda.inmovables = response.inmovables;
+			console.log(response.inmovables)
+			nvtCalamanda.inmovablesClassList = inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+
+		});
+	}  //CalamdnaDos
+	init();
+
+});
 
 /***** SUR 57  22 FEBRERO 23*****/
 app.controller('NvtSurQuoteCtrl', function($scope, Inmovables, Developments, Status) {
@@ -9194,7 +9342,7 @@ app.controller('NvtSurQuoteCtrl', function($scope, Inmovables, Developments, Sta
 
 
 
-/***** SUR 57  22 FEBRERO 23*****/
+/***** SUR 57 NUEVO  27 ABRIL 23*****/
 app.controller('NvtSurNuevoQuoteCtrl', function($scope, Inmovables, Developments, Status) {
 
 	var nvtSurNuevo = this;
@@ -12364,6 +12512,8 @@ app.controller('PBTundraQuoteCtrl', function($scope, Inmovables, Moment) {
 
 });
 
+
+
 // LANZAMIENTO DE LOMAS DIEGO 26-01-2022
 
 app.controller('PBLomasQuoteCtrl', function($scope, Inmovables, Moment) {
@@ -12874,7 +13024,7 @@ app.controller('PBBMalaquitaQuoteCtrl', function($scope, Inmovables, Moment) {
 	}
 
 	let init = function() {
-		Inmovables.getInmovablesData(12, 29).then(function(response) {
+		Inmovables.getInmovablesData(12, 24).then(function(response) {
 			inmovablesData = response;
 			malaquita.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
 		});
@@ -12883,6 +13033,7 @@ app.controller('PBBMalaquitaQuoteCtrl', function($scope, Inmovables, Moment) {
 	init();
 
 });
+
 /********** lanzamiento OPALO 16 septiembre 2023 **********/
 app.controller('PBBOpaloQuoteCtrl', function($scope, Inmovables, Moment) {
 	
@@ -12991,6 +13142,120 @@ app.controller('PBBOpaloQuoteCtrl', function($scope, Inmovables, Moment) {
 	init();
 
 });
+
+/********** lanzamiento OPALO 16 septiembre 2023 **********/
+app.controller('PBBJadeQuoteCtrl', function($scope, Inmovables, Moment) {
+	
+	let jade = this;
+
+	jade.month = Moment.month();
+	jade.nextMonth = Moment.nextMonth();
+	jade.year = Moment.year();
+	
+	let inmovablesData = [];
+	jade.inmovablesClassList = [];
+	jade.propertyData = [];
+
+	jade.dialogDisplay = 'hide';
+
+	let discountPlan1 = .25;
+	let discountPlan2 = .20;
+
+	jade.showPropertyData = function(idCondominium, number) {
+
+		angular.forEach(inmovablesData.inmovables, function(row, key) {
+
+			if (row.number == number && row.idCondominium == idCondominium) {
+
+				for (let indexCondos = 0; indexCondos < inmovablesData.condos.length; indexCondos++) {
+
+					if (inmovablesData.inmovables[key].idCondominium == inmovablesData.condos[indexCondos].idCondominium) {
+
+						jade.propertyData.condominium = inmovablesData.condos[indexCondos].condominium;
+	
+						break;
+	
+					}
+	
+				}
+
+				if (row.property_class == 1) {
+					jade.propertyData.propertyClass = 'Nave industrial';
+					jade.costToBlock = '$30,000 MXN';
+				} else if (row.property_class == 2) {
+					jade.propertyData.propertyClass = 'Lote industrial';
+					jade.costToBlock = '$10,000 MXN';
+				} else {
+					jade.propertyData.propertyClass = 'Lote habitacional';
+					jade.costToBlock = '$10,000 MXN';
+				}
+				
+				for (let indexType = 0; indexType < inmovablesData.propertyTypes.length; indexType++) {
+
+					if (inmovablesData.inmovables[key].idPropertyType == inmovablesData.propertyTypes[indexType].idPropertyType) {
+
+						jade.propertyData.type = inmovablesData.propertyTypes[indexType].type;
+						jade.propertyData.cost_m2 = inmovablesData.propertyTypes[indexType].cost_m2;
+						break;
+	
+					}
+	
+				}
+
+				if (inmovablesData.inmovables[key].cost_m2_increase != null) {
+					jade.propertyData.cost_m2 += jade.propertyData.cost_m2 * inmovablesData.inmovables[key].cost_m2_increase.value;
+				}
+
+				jade.propertyData.number = row.number;
+				jade.propertyData.area = row.area;
+				let total = jade.propertyData.cost_m2 * jade.propertyData.area;
+				jade.propertyData.total = total.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+
+				let totalDiscountPlan1 = total - (total * discountPlan1);
+				if (key == 27) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+				if (key == 72) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+				if (key == 71) {
+					totalDiscountPlan1 = totalDiscountPlan1 + 0.01
+				}
+
+				jade.propertyData.discountPlan1 = discountPlan1 * 100;
+				jade.propertyData.totalPlan1 = totalDiscountPlan1.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+				let totalDiscountPlan2 = total - (total * discountPlan2);
+				jade.propertyData.discountPlan2 = discountPlan2 * 100;
+				jade.propertyData.totalPlan2 = totalDiscountPlan2.toLocaleString(undefined, {minimumFractionDigits: 2,'maximumFractionDigits':2});
+			
+				jade.openDialog();
+
+			}
+
+		});
+
+	}
+
+	jade.openDialog = function() {
+		jade.dialogDisplay = '';
+	}
+
+	jade.closeDialog = function() {
+		jade.dialogDisplay = 'hide';
+	}
+
+	let init = function() {
+		Inmovables.getInmovablesData(12, 31).then(function(response) {
+			inmovablesData = response;
+			jade.inmovablesClassList = Inmovables.generateInmovablesClassList(inmovablesData.inmovables);
+		});
+	}
+
+	init();
+
+});
+
+
 /********** Menu **********/
 
 app.controller('ContactMenuCtrl', function DemoCtrl($mdDialog, $window, $location) {
@@ -13026,11 +13291,11 @@ app.controller('ContactMenuCtrl', function DemoCtrl($mdDialog, $window, $locatio
 	};
 
 	this.toWhatsapp = function() {
-		$window.location.href = 'https://wa.me/5214421275214?text=Me%20gustaría%20saber%20más%20acerca%20de%20Portto%20Blanco';
+		$window.location.href = 'https://wa.me/5214422912223?text=Me%20gustaría%20saber%20más%20acerca%20de%20Portto%20Blanco';
 	}
 
 	this.toCall = function() {
-		$window.location.href = 'tel:+5214421275214';
+		$window.location.href = 'tel:+5214422912223';
 	}
 
 	this.toPBEstepa = function() {
@@ -13445,6 +13710,21 @@ app.controller('UpdateUserCtrl', function($scope, $rootScope, $http, $location, 
 
 });
 
+app.directive('fileModel', ['$parse', function ($parse) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var model = $parse(attrs.fileModel);
+            var modelSetter = model.assign;
+            
+            element.bind('change', function(){
+                scope.$apply(function(){
+                    modelSetter(scope, element[0].files);
+                });
+            });
+        }
+    };
+}]);
 app.controller('InsertLeadCtrl', function($scope, $location, $http, Session) {
 	
 	Session.isLogged().then(function(response) {
@@ -13504,45 +13784,42 @@ app.controller('InsertLeadCtrl', function($scope, $location, $http, Session) {
 	}
 
 	let sendLeadData = function() {
-		lead.newLead.email = lead.newLead.email.toLowerCase();
-		var email = lead.newLead.email.split("@");
-		$http({
-			method: 'POST',
-	    url: 'application/controllers/insert_lead_controller.php',
-	    data: {
-		    name: lead.newLead.name,
-				last_name: lead.newLead.last_name,
-				email: email[0],
-				domain: email[1],
-				phone: lead.newLead.phone,
-				idGender: lead.newLead.idGender,
-				address: lead.newLead.address,
-				idMedium: lead.newLead.idMedium,
-				idLeadStatus: lead.newLead.idLeadStatus
-	    },
-	    headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
-		}).then(function(response) {
-			responseHandler(response.data.status);
-			console.log('HTTP_INSERT_LEAD_OK');
-		}, function(response) {
-			console.log('HTTP_INSERT_LEAD_ERR');
-		});
-	}
+        lead.newLead.email = lead.newLead.email.toLowerCase();
+        var email = lead.newLead.email.split("@");
+        
+        var formData = new FormData();
+        formData.append('name', lead.newLead.name);
+        formData.append('last_name', lead.newLead.last_name);
+        formData.append('email', email[0]);
+        formData.append('domain', email[1]);
+        formData.append('phone', lead.newLead.phone);
+        formData.append('idGender', lead.newLead.idGender);
+        formData.append('address', lead.newLead.address);
+        formData.append('idMedium', lead.newLead.idMedium);
+        formData.append('idLeadStatus', lead.newLead.idLeadStatus);
+        
+        if (lead.newLead.files) {
+            for (var i = 0; i < lead.newLead.files.length; i++) {
+                formData.append('files[]', lead.newLead.files[i]);
+            }
+        }
 
-	lead.checkMedium = function() {
-		if (lead.newLead['idMedium'] > 0) {
-			return true;
-		}
-		lead.messageError = 'Selecciona un medio de contacto';
-		return false;
-	}
+        $http.post('application/controllers/insert_lead_controller.php', formData, {
+            transformRequest: angular.identity,
+            headers: { 'Content-Type': undefined }
+        }).then(function(response) {
+            responseHandler(response.data.status);
+            console.log('HTTP_INSERT_LEAD_OK');
+        }, function(response) {
+            console.log('HTTP_INSERT_LEAD_ERR');
+        });
+    };
 
-	lead.insertLead = function() {
-		if (lead.checkMedium()) {
-			sendLeadData();
-		}
-	}
-
+    lead.insertLead = function() {
+        if (lead.checkMedium()) {
+            sendLeadData();
+        }
+    }
 });
 
 app.controller('LandingCtrl', function($scope, $location, $http) {
