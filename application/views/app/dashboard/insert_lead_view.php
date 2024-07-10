@@ -99,6 +99,15 @@
                             <option ng-value="3">Mujer</option>
                         </select>
                         <label>Sexo</label>
+                        <div class="row">
+        <div class="file-field input-field col s12">
+            <div class="btn">
+                <span>Archivo</span>
+                <input type="file" id="file" name="file" multiple file-model="lead.newLead.files">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Sube uno o más archivos">
+            </div>
                     </div>
                 </div>
                 <p style="color: red;">{{lead.messageError}}</p>
